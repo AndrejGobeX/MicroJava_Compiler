@@ -1,0 +1,331 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+parser code {:
+	boolean errorDetected;
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+
+
+:}
+
+init with {:
+	errorDetected = false;
+:}
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+terminal PROG, BREAK, CLASS, ENUM, ELSE, CONST, IF, DO, SUPER, THIS, WHILE, NEW, PRINT, READ, RETURN, VOID, EXTENDS, CONTINUE, RECORD;
+terminal INC, PLUS, DEC, MINUS, STAR, SLASH, PERCENT, EQUAL, NOTEQUAL, GE, GT, LE, LT, AND, OR, ASSIGN, SEMI, COLON, COMMA, DOT, LPAREN, RPAREN, LBRACE, RBRACE, LSQ, RSQ;
+terminal Integer NUMCONST;
+terminal String IDENT;
+terminal Character CHARCONST;
+terminal Integer BOOLCONST;
+
+nonterminal DeclList, Decl, ConstDecl, ConstAssList, ConstAss, VarDecl, VarAssList;
+nonterminal VarDeclList, ClassDecl, RecordDecl, MethodDecl, MethodDeclList;
+nonterminal FormPars, Statement, StatementList, SingleStatement, Statements, DesignatorStatement;
+nonterminal ActPars, DesignatorList;
+nonterminal Addop, Mulop;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, ClassName, RecordName, MethodName;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, ExtendsHelper, MethodType;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorIdent, DesignatorElem, Designator, Expr, ExprError, Terms, Term, Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ConditionHelper, Condition, CondFact, CondTerm, Relop, VarAss;
+
+precedence left ELSE;
+
+
+Program ::= (Program) PROG ProgName DeclList LBRACE MethodDeclList RBRACE;
+
+ProgName ::= (ProgName) IDENT:programName;
+
+DeclList ::= (DeclList1) DeclList Decl
+		|
+		(DeclListE) /* epsilon */
+		;
+
+Decl ::= (DeclConst) ConstDecl
+		|
+		(DeclVar) VarDecl
+		|
+		(DeclClass) ClassDecl
+		|
+		(DeclRecord) RecordDecl
+		;
+
+ConstDecl ::= (ConstDeclOK) CONST Type ConstAss ConstAssList SEMI
+		|
+		(ConstDeclError) CONST error SEMI:l
+		;
+
+ConstAssList ::= (ConstAssList1) ConstAssList COMMA ConstAss
+			|
+			(ConstAssListE) /* epsilon */
+			;
+
+ConstAss ::= (ConstAssNum) IDENT:constName ASSIGN NUMCONST
+			|
+			(ConstAssBool) IDENT:constName ASSIGN BOOLCONST
+			|
+			(ConstAssChar) IDENT:constName ASSIGN CHARCONST
+			|
+			(ConstAssError) error:l
+			;
+
+VarDecl ::= (VarDeclOK) Type VarAss VarAssList SEMI
+		|
+		(VarDeclError) error SEMI:l
+		;
+
+VarAssList ::= (VarAssList1) VarAssList COMMA VarAss
+			|
+			(VarAssListE) /* epsilon */
+			;
+
+VarDeclList ::= (VarDeclList1) VarDecl VarDeclList
+			|
+			(VarDeclListE) /* epsilon */
+			;
+
+VarAss ::= (VarAssNo) IDENT:varName
+		|
+		(VarAssBr) IDENT:varName LSQ RSQ
+		|
+		(VarAssError) error:l
+		;
+
+ClassDecl ::= (ClassDeclNothing) CLASS ClassName LBRACE VarDeclList RBRACE
+			|
+			(ClassDeclMethods) CLASS ClassName LBRACE VarDeclList LBRACE MethodDeclList RBRACE RBRACE
+			|
+			(ClassDeclConstructor) CLASS ClassName LBRACE VarDeclList LBRACE IDENT:constructorName LPAREN RPAREN VarDeclList LBRACE StatementList RBRACE MethodDeclList RBRACE RBRACE
+			;
+
+ClassName ::= (ClassNameNo) IDENT:className
+			|
+			(ClassNameExtends) IDENT:className ExtendsHelper
+			;
+			
+ExtendsHelper ::= (ExtendsHelper1) EXTENDS IDENT:extensionTypeName
+				|
+				(ExtendsHelperError) error:l
+				;
+
+RecordDecl ::= (RecordDecl) RECORD RecordName LBRACE VarDeclList RBRACE;
+
+RecordName ::= (RecordName) IDENT:recordName;
+
+Type ::= (Type) IDENT:typeName;
+
+MethodDecl ::= (MethodDeclType) MethodType MethodName LPAREN RPAREN VarDeclList LBRACE StatementList RBRACE
+			|
+			(MethodDeclTypeFormPars) MethodType MethodName LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE
+			;
+
+MethodName ::= (MethodName) IDENT:methodName;
+
+MethodType ::= (MethodType1) Type
+			|
+			(MethodTypeVoid) VOID
+			;
+
+MethodDeclList ::= (MethodDeclList1) MethodDecl MethodDeclList
+			|
+			(MethodDeclListE) /* epsilon */
+			;
+
+FormPars ::= (FormPars1) Type VarAss
+			|
+			(FormPars2) FormPars COMMA Type VarAss
+			|
+			(FormParsError1) FormPars COMMA error:l
+			|
+			(FormParsError2) error:l
+			;
+
+Statement ::= (StatementSingle) SingleStatement
+			|
+			(StatementStatements) Statements
+			;
+			
+StatementList ::= (StatementList1) StatementList Statement
+				|
+				(StatementListE) /* epsilon */
+				;
+				
+SingleStatement ::= (SingleStatementDesignator) DesignatorStatement SEMI
+				|
+				(SingleStatementIfElse) IF LPAREN ConditionHelper RPAREN Statement ELSE Statement
+				|
+				(SingleStatementIf) IF LPAREN ConditionHelper RPAREN Statement
+				|
+				(SingleStatementDoWhile) DO Statement WHILE LPAREN Condition RPAREN SEMI
+				|
+				(SingleStatementBreak) BREAK SEMI
+				|
+				(SingleStatementContinue) CONTINUE SEMI
+				|
+				(SingleStatementReturn) RETURN SEMI
+				|
+				(SingleStatementReturnExpr) RETURN Expr SEMI
+				|
+				(SingleStatementRead) READ LPAREN Designator RPAREN SEMI
+				|
+				(SingleStatementPrint) PRINT LPAREN Expr RPAREN SEMI
+				|
+				(SingleStatementPrintNum) PRINT LPAREN Expr COMMA NUMCONST RPAREN SEMI
+				;
+
+Statements ::= (Statements) LBRACE StatementList RBRACE;
+
+DesignatorStatement ::= (DesignatorStatementAssign) Designator ASSIGN ExprError
+					|
+					(DesignatorStatementActPars) Designator LPAREN ActPars RPAREN
+					|
+					(DesignatorStatementNo) Designator LPAREN RPAREN
+					|
+					(DesignatorStatementInc) Designator INC
+					|
+					(DesignatorStatementDec) Designator DEC
+					;
+
+ActPars ::= (ActPars1) Expr
+		|
+		(ActPars2) ActPars COMMA Expr
+		;
+		
+ConditionHelper ::= (ConditionOK) Condition
+			|
+			(ConditionError) error:l
+			;
+		
+Condition ::= (Condition1) CondTerm
+			|
+			(Condition2) Condition OR CondTerm
+			;
+
+CondTerm ::= (CondTerm1) CondFact
+			|
+			(CondTerm2) CondTerm AND CondFact
+			;
+			
+CondFact ::= (CondFactE) Expr
+		|
+		(CondFactR) Expr Relop Expr
+		;
+
+Terms ::= (Terms1) Term
+		|
+		(Terms2) Terms Addop Term
+		;
+
+Expr ::= (Expr1) Terms
+		|
+		(Expr2) MINUS Terms
+		;
+
+ExprError ::= (ExprError1) Expr
+			|
+			(ExprError2) error:l
+			;
+
+Term ::= (Term1) Factor
+		|
+		(Term2) Term Mulop Factor
+		;
+		
+Factor ::= (FactorDesignator) Designator
+		|
+		(FactorDesignatorNo) Designator LPAREN RPAREN
+		|
+		(FactorDesignatorActPars) Designator LPAREN ActPars RPAREN
+		|
+		(FactorNumConst) NUMCONST
+		|
+		(FactorCharConst) CHARCONST
+		|
+		(FactorBoolConst) BOOLCONST
+		|
+		(FactorNew) NEW Type
+		|
+		(FactorNewAr) NEW Type LSQ Expr RSQ
+		|
+		(FactorExpr) LPAREN Expr RPAREN
+		;
+		
+Designator ::= (Designator) DesignatorIdent DesignatorList;
+
+DesignatorIdent ::= (DesignatorIdentIdent) IDENT:designatorName
+                |
+                (DesignatorIdentSuper) SUPER
+                |
+                (DesignatorIdentThis) THIS
+                ;
+
+DesignatorList ::= (DesignatorList1) DesignatorList DesignatorElem
+				|
+				(DesignatorListE) /* epsilon */
+				;
+				
+DesignatorElem ::= (DesignatorEIdent) DOT IDENT:identName
+				|
+				(DesignatorEExpr) LSQ Expr RSQ
+				;
+
+Relop ::= (RelopEq) EQUAL
+		| 
+		(RelopNeq) NOTEQUAL
+		| 
+		(RelopGT) GT
+		| 
+		(RelopGE) GE
+		| 
+		(RelopLT) LT
+		| 
+		(RelopLE) LE
+		;
+		
+Addop ::= (AddopP) PLUS
+		| 
+		(AddopM) MINUS
+		;
+
+Mulop ::= (MulopS) STAR
+		|
+		(MulopD) SLASH
+		|
+		(MulopM) PERCENT
+		;
+		

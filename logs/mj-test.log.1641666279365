@@ -1,0 +1,116 @@
+INFO  14:16:27,642 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  14:16:28,005 - #2 program
+INFO  14:16:28,006 - #48 MJProgram
+INFO  14:16:28,006 - #48 int
+INFO  14:16:28,010 - #48 a
+INFO  14:16:28,012 - #39 ,
+INFO  14:16:28,016 - #48 b
+INFO  14:16:28,017 - #39 ,
+INFO  14:16:28,017 - #48 c
+INFO  14:16:28,017 - #37 ;
+INFO  14:16:28,017 - #47 9
+ERROR 14:16:28,018 - 
+Sintaksna greska na liniji 3
+INFO  14:16:28,018 - #48 x
+INFO  14:16:28,018 - #37 ;
+INFO  14:16:28,018 - #48 int
+INFO  14:16:28,020 - #48 i
+INFO  14:16:28,020 - #39 ,
+ERROR 14:16:28,020 - Greska pri definisanju promenljive na liniji 2
+INFO  14:16:28,023 - #48 x
+INFO  14:16:28,023 - #39 ,
+INFO  14:16:28,023 - #47 9
+ERROR 14:16:28,024 - 
+Sintaksna greska na liniji 4
+INFO  14:16:28,024 - #39 ,
+INFO  14:16:28,024 - #48 y
+INFO  14:16:28,024 - #39 ,
+INFO  14:16:28,024 - #24 -
+ERROR 14:16:28,024 - Greska pri definisanju promenljive na liniji 4
+ERROR 14:16:28,024 - 
+Sintaksna greska na liniji 4
+INFO  14:16:28,025 - #47 98
+INFO  14:16:28,025 - #48 sd
+INFO  14:16:28,025 - #37 ;
+INFO  14:16:28,025 - #43 {
+INFO  14:16:28,025 - #17 void
+INFO  14:16:28,025 - #48 main
+ERROR 14:16:28,025 - Greska pri definisanju promenljive na liniji 4
+INFO  14:16:28,027 - #41 (
+INFO  14:16:28,030 - #42 )
+INFO  14:16:28,030 - #43 {
+INFO  14:16:28,032 - #44 }
+INFO  14:16:28,035 - #44 }
+INFO  14:16:28,061 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  DeclList1(
+    DeclList1(
+      DeclListE(
+      ) [DeclListE]
+      DeclVar(
+        VarDeclOK(
+          Type(
+           int
+          ) [Type]
+          VarAssError(
+          ) [VarAssError]
+          VarAssListE(
+          ) [VarAssListE]
+        ) [VarDeclOK]
+      ) [DeclVar]
+    ) [DeclList1]
+    DeclVar(
+      VarDeclOK(
+        Type(
+         int
+        ) [Type]
+        VarAssNo(
+         i
+        ) [VarAssNo]
+        VarAssList1(
+          VarAssList1(
+            VarAssList1(
+              VarAssList1(
+                VarAssListE(
+                ) [VarAssListE]
+                VarAssNo(
+                 x
+                ) [VarAssNo]
+              ) [VarAssList1]
+              VarAssError(
+              ) [VarAssError]
+            ) [VarAssList1]
+            VarAssNo(
+             y
+            ) [VarAssNo]
+          ) [VarAssList1]
+          VarAssError(
+          ) [VarAssError]
+        ) [VarAssList1]
+      ) [VarDeclOK]
+    ) [DeclVar]
+  ) [DeclList1]
+  MethodDeclList1(
+    MethodDeclType(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      VarDeclListE(
+      ) [VarDeclListE]
+      StatementListE(
+      ) [StatementListE]
+    ) [MethodDeclType]
+    MethodDeclListE(
+    ) [MethodDeclListE]
+  ) [MethodDeclList1]
+) [Program]
+INFO  14:16:28,062 - ===================================
+INFO  14:16:28,072 - Deklarisana promenljiva i na liniji 4
+INFO  14:16:28,073 - Deklarisana promenljiva x na liniji 4
+INFO  14:16:28,073 - Deklarisana promenljiva y na liniji 4
+INFO  14:16:28,073 - ===================================
+INFO  14:16:28,078 - Parsiranje nije uspesno!

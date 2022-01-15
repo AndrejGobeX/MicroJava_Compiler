@@ -1,0 +1,726 @@
+INFO  20:48:57,657 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  20:48:58,120 - #2 program
+INFO  20:48:58,120 - #48 Pera
+INFO  20:48:58,125 - #48 int
+INFO  20:48:58,125 - #48 x
+INFO  20:48:58,131 - #39 ,
+INFO  20:48:58,136 - #48 y
+INFO  20:48:58,136 - #37 ;
+INFO  20:48:58,136 - #7 const
+INFO  20:48:58,136 - #48 int
+INFO  20:48:58,136 - #48 a
+INFO  20:48:58,136 - #36 =
+INFO  20:48:58,136 - #47 5
+INFO  20:48:58,136 - #39 ,
+INFO  20:48:58,136 - #48 z
+INFO  20:48:58,141 - #36 =
+INFO  20:48:58,141 - #47 79
+INFO  20:48:58,141 - #37 ;
+INFO  20:48:58,141 - #7 const
+INFO  20:48:58,141 - #48 int
+INFO  20:48:58,141 - #48 u
+INFO  20:48:58,141 - #36 =
+INFO  20:48:58,141 - #47 7
+INFO  20:48:58,145 - #37 ;
+INFO  20:48:58,145 - #20 record
+INFO  20:48:58,145 - #48 R
+INFO  20:48:58,145 - #43 {
+INFO  20:48:58,145 - #48 int
+INFO  20:48:58,145 - #48 x
+INFO  20:48:58,145 - #39 ,
+INFO  20:48:58,145 - #48 t
+INFO  20:48:58,145 - #39 ,
+INFO  20:48:58,145 - #48 t2
+INFO  20:48:58,145 - #39 ,
+INFO  20:48:58,145 - #48 t3
+INFO  20:48:58,145 - #37 ;
+INFO  20:48:58,145 - #44 }
+INFO  20:48:58,150 - #4 class
+INFO  20:48:58,150 - #48 A
+INFO  20:48:58,150 - #43 {
+INFO  20:48:58,150 - #48 int
+INFO  20:48:58,150 - #48 x
+INFO  20:48:58,150 - #39 ,
+INFO  20:48:58,150 - #48 y
+INFO  20:48:58,155 - #37 ;
+INFO  20:48:58,155 - #43 {
+INFO  20:48:58,155 - #48 A
+INFO  20:48:58,155 - #41 (
+INFO  20:48:58,155 - #42 )
+INFO  20:48:58,155 - #43 {
+INFO  20:48:58,155 - #44 }
+INFO  20:48:58,160 - #44 }
+INFO  20:48:58,160 - #44 }
+INFO  20:48:58,160 - #4 class
+INFO  20:48:58,165 - #48 B
+INFO  20:48:58,165 - #18 extends
+INFO  20:48:58,165 - #48 A
+INFO  20:48:58,165 - #43 {
+INFO  20:48:58,165 - #48 int
+INFO  20:48:58,165 - #48 w
+INFO  20:48:58,165 - #37 ;
+INFO  20:48:58,165 - #43 {
+INFO  20:48:58,165 - #48 B
+INFO  20:48:58,165 - #41 (
+INFO  20:48:58,165 - #42 )
+INFO  20:48:58,165 - #43 {
+INFO  20:48:58,165 - #44 }
+INFO  20:48:58,165 - #48 A
+INFO  20:48:58,165 - #48 prin
+INFO  20:48:58,165 - #41 (
+INFO  20:48:58,170 - #42 )
+INFO  20:48:58,170 - #43 {
+INFO  20:48:58,170 - #16 return
+INFO  20:48:58,170 - #13 new
+INFO  20:48:58,170 - #48 B
+INFO  20:48:58,170 - #37 ;
+INFO  20:48:58,170 - #44 }
+INFO  20:48:58,170 - #48 int
+INFO  20:48:58,170 - #48 haha
+INFO  20:48:58,175 - #41 (
+INFO  20:48:58,175 - #48 char
+INFO  20:48:58,175 - #48 x
+INFO  20:48:58,175 - #42 )
+INFO  20:48:58,175 - #43 {
+INFO  20:48:58,175 - #10 super
+INFO  20:48:58,175 - #40 .
+INFO  20:48:58,180 - #48 x
+INFO  20:48:58,180 - #36 =
+INFO  20:48:58,180 - #10 super
+INFO  20:48:58,180 - #40 .
+INFO  20:48:58,180 - #48 x
+INFO  20:48:58,180 - #37 ;
+INFO  20:48:58,180 - #16 return
+INFO  20:48:58,185 - #47 15
+INFO  20:48:58,185 - #37 ;
+INFO  20:48:58,185 - #44 }
+INFO  20:48:58,185 - #48 int
+INFO  20:48:58,185 - #48 f
+INFO  20:48:58,185 - #41 (
+INFO  20:48:58,185 - #42 )
+INFO  20:48:58,185 - #43 {
+INFO  20:48:58,185 - #16 return
+INFO  20:48:58,185 - #47 15
+INFO  20:48:58,185 - #37 ;
+INFO  20:48:58,185 - #44 }
+INFO  20:48:58,185 - #44 }
+INFO  20:48:58,185 - #44 }
+INFO  20:48:58,185 - #43 {
+INFO  20:48:58,185 - #17 void
+INFO  20:48:58,185 - #48 main
+INFO  20:48:58,190 - #41 (
+INFO  20:48:58,190 - #42 )
+INFO  20:48:58,190 - #48 char
+INFO  20:48:58,190 - #48 c
+INFO  20:48:58,190 - #45 [
+INFO  20:48:58,190 - #46 ]
+INFO  20:48:58,190 - #37 ;
+INFO  20:48:58,190 - #48 int
+INFO  20:48:58,190 - #48 flags
+INFO  20:48:58,190 - #45 [
+INFO  20:48:58,190 - #46 ]
+INFO  20:48:58,190 - #39 ,
+INFO  20:48:58,190 - #48 f
+INFO  20:48:58,190 - #37 ;
+INFO  20:48:58,190 - #48 B
+INFO  20:48:58,190 - #48 b
+INFO  20:48:58,190 - #37 ;
+INFO  20:48:58,190 - #48 A
+INFO  20:48:58,190 - #48 a
+INFO  20:48:58,190 - #37 ;
+INFO  20:48:58,190 - #43 {
+INFO  20:48:58,190 - #8 if
+INFO  20:48:58,190 - #41 (
+INFO  20:48:58,190 - #47 1
+INFO  20:48:58,195 - #33 <
+INFO  20:48:58,195 - #47 2
+INFO  20:48:58,195 - #42 )
+INFO  20:48:58,200 - #43 {
+INFO  20:48:58,200 - #48 f
+INFO  20:48:58,200 - #36 =
+INFO  20:48:58,200 - #47 1
+INFO  20:48:58,200 - #37 ;
+INFO  20:48:58,200 - #44 }
+INFO  20:48:58,200 - #8 if
+INFO  20:48:58,200 - #41 (
+INFO  20:48:58,200 - #47 3
+INFO  20:48:58,205 - #34 &&
+INFO  20:48:58,205 - #50 1
+INFO  20:48:58,205 - #42 )
+INFO  20:48:58,205 - #43 {
+INFO  20:48:58,205 - #48 f
+INFO  20:48:58,205 - #36 =
+INFO  20:48:58,205 - #47 2
+INFO  20:48:58,205 - #37 ;
+INFO  20:48:58,205 - #44 }
+INFO  20:48:58,205 - #15 read
+INFO  20:48:58,205 - #41 (
+INFO  20:48:58,205 - #48 c
+INFO  20:48:58,205 - #45 [
+INFO  20:48:58,205 - #47 1
+INFO  20:48:58,205 - #46 ]
+INFO  20:48:58,205 - #42 )
+INFO  20:48:58,205 - #37 ;
+INFO  20:48:58,205 - #44 }
+INFO  20:48:58,205 - #44 }
+INFO  20:48:58,231 - Program(
+  ProgName(
+   Pera
+  ) [ProgName]
+  DeclList1(
+    DeclList1(
+      DeclList1(
+        DeclList1(
+          DeclList1(
+            DeclList1(
+              DeclListE(
+              ) [DeclListE]
+              DeclVar(
+                VarDeclOK(
+                  Type(
+                   int
+                  ) [Type]
+                  VarAssNo(
+                   x
+                  ) [VarAssNo]
+                  VarAssList1(
+                    VarAssListE(
+                    ) [VarAssListE]
+                    VarAssNo(
+                     y
+                    ) [VarAssNo]
+                  ) [VarAssList1]
+                ) [VarDeclOK]
+              ) [DeclVar]
+            ) [DeclList1]
+            DeclConst(
+              ConstDeclOK(
+                Type(
+                 int
+                ) [Type]
+                ConstAssNum(
+                 a
+                 5
+                ) [ConstAssNum]
+                ConstAssList1(
+                  ConstAssListE(
+                  ) [ConstAssListE]
+                  ConstAssNum(
+                   z
+                   79
+                  ) [ConstAssNum]
+                ) [ConstAssList1]
+              ) [ConstDeclOK]
+            ) [DeclConst]
+          ) [DeclList1]
+          DeclConst(
+            ConstDeclOK(
+              Type(
+               int
+              ) [Type]
+              ConstAssNum(
+               u
+               7
+              ) [ConstAssNum]
+              ConstAssListE(
+              ) [ConstAssListE]
+            ) [ConstDeclOK]
+          ) [DeclConst]
+        ) [DeclList1]
+        DeclRecord(
+          RecordDecl(
+            RecordName(
+             R
+            ) [RecordName]
+            VarDeclList1(
+              VarDeclOK(
+                Type(
+                 int
+                ) [Type]
+                VarAssNo(
+                 x
+                ) [VarAssNo]
+                VarAssList1(
+                  VarAssList1(
+                    VarAssList1(
+                      VarAssListE(
+                      ) [VarAssListE]
+                      VarAssNo(
+                       t
+                      ) [VarAssNo]
+                    ) [VarAssList1]
+                    VarAssNo(
+                     t2
+                    ) [VarAssNo]
+                  ) [VarAssList1]
+                  VarAssNo(
+                   t3
+                  ) [VarAssNo]
+                ) [VarAssList1]
+              ) [VarDeclOK]
+              VarDeclListE(
+              ) [VarDeclListE]
+            ) [VarDeclList1]
+          ) [RecordDecl]
+        ) [DeclRecord]
+      ) [DeclList1]
+      DeclClass(
+        ClassDeclConstructor(
+          ClassNameNo(
+           A
+          ) [ClassNameNo]
+          VarDeclList1(
+            VarDeclOK(
+              Type(
+               int
+              ) [Type]
+              VarAssNo(
+               x
+              ) [VarAssNo]
+              VarAssList1(
+                VarAssListE(
+                ) [VarAssListE]
+                VarAssNo(
+                 y
+                ) [VarAssNo]
+              ) [VarAssList1]
+            ) [VarDeclOK]
+            VarDeclListE(
+            ) [VarDeclListE]
+          ) [VarDeclList1]
+         A
+          VarDeclListE(
+          ) [VarDeclListE]
+          StatementListE(
+          ) [StatementListE]
+          MethodDeclListE(
+          ) [MethodDeclListE]
+        ) [ClassDeclConstructor]
+      ) [DeclClass]
+    ) [DeclList1]
+    DeclClass(
+      ClassDeclConstructor(
+        ClassNameExtends(
+         B
+          ExtendsHelper1(
+           A
+          ) [ExtendsHelper1]
+        ) [ClassNameExtends]
+        VarDeclList1(
+          VarDeclOK(
+            Type(
+             int
+            ) [Type]
+            VarAssNo(
+             w
+            ) [VarAssNo]
+            VarAssListE(
+            ) [VarAssListE]
+          ) [VarDeclOK]
+          VarDeclListE(
+          ) [VarDeclListE]
+        ) [VarDeclList1]
+       B
+        VarDeclListE(
+        ) [VarDeclListE]
+        StatementListE(
+        ) [StatementListE]
+        MethodDeclList1(
+          MethodDeclType(
+            MethodType1(
+              Type(
+               A
+              ) [Type]
+            ) [MethodType1]
+            MethodName(
+             prin
+            ) [MethodName]
+            VarDeclListE(
+            ) [VarDeclListE]
+            StatementList1(
+              StatementListE(
+              ) [StatementListE]
+              StatementSingle(
+                SingleStatementReturnExpr(
+                  Expr1(
+                    Terms1(
+                      Term1(
+                        FactorNew(
+                          Type(
+                           B
+                          ) [Type]
+                        ) [FactorNew]
+                      ) [Term1]
+                    ) [Terms1]
+                  ) [Expr1]
+                ) [SingleStatementReturnExpr]
+              ) [StatementSingle]
+            ) [StatementList1]
+          ) [MethodDeclType]
+          MethodDeclList1(
+            MethodDeclTypeFormPars(
+              MethodType1(
+                Type(
+                 int
+                ) [Type]
+              ) [MethodType1]
+              MethodName(
+               haha
+              ) [MethodName]
+              FormPars1(
+                Type(
+                 char
+                ) [Type]
+                VarAssNo(
+                 x
+                ) [VarAssNo]
+              ) [FormPars1]
+              VarDeclListE(
+              ) [VarDeclListE]
+              StatementList1(
+                StatementList1(
+                  StatementListE(
+                  ) [StatementListE]
+                  StatementSingle(
+                    SingleStatementDesignator(
+                      DesignatorStatementAssign(
+                        Designator(
+                          DesignatorIdentSuper(
+                          ) [DesignatorIdentSuper]
+                          DesignatorList1(
+                            DesignatorListE(
+                            ) [DesignatorListE]
+                            DesignatorEIdent(
+                             x
+                            ) [DesignatorEIdent]
+                          ) [DesignatorList1]
+                        ) [Designator]
+                        ExprError1(
+                          Expr1(
+                            Terms1(
+                              Term1(
+                                FactorDesignator(
+                                  Designator(
+                                    DesignatorIdentSuper(
+                                    ) [DesignatorIdentSuper]
+                                    DesignatorList1(
+                                      DesignatorListE(
+                                      ) [DesignatorListE]
+                                      DesignatorEIdent(
+                                       x
+                                      ) [DesignatorEIdent]
+                                    ) [DesignatorList1]
+                                  ) [Designator]
+                                ) [FactorDesignator]
+                              ) [Term1]
+                            ) [Terms1]
+                          ) [Expr1]
+                        ) [ExprError1]
+                      ) [DesignatorStatementAssign]
+                    ) [SingleStatementDesignator]
+                  ) [StatementSingle]
+                ) [StatementList1]
+                StatementSingle(
+                  SingleStatementReturnExpr(
+                    Expr1(
+                      Terms1(
+                        Term1(
+                          FactorNumConst(
+                           15
+                          ) [FactorNumConst]
+                        ) [Term1]
+                      ) [Terms1]
+                    ) [Expr1]
+                  ) [SingleStatementReturnExpr]
+                ) [StatementSingle]
+              ) [StatementList1]
+            ) [MethodDeclTypeFormPars]
+            MethodDeclList1(
+              MethodDeclType(
+                MethodType1(
+                  Type(
+                   int
+                  ) [Type]
+                ) [MethodType1]
+                MethodName(
+                 f
+                ) [MethodName]
+                VarDeclListE(
+                ) [VarDeclListE]
+                StatementList1(
+                  StatementListE(
+                  ) [StatementListE]
+                  StatementSingle(
+                    SingleStatementReturnExpr(
+                      Expr1(
+                        Terms1(
+                          Term1(
+                            FactorNumConst(
+                             15
+                            ) [FactorNumConst]
+                          ) [Term1]
+                        ) [Terms1]
+                      ) [Expr1]
+                    ) [SingleStatementReturnExpr]
+                  ) [StatementSingle]
+                ) [StatementList1]
+              ) [MethodDeclType]
+              MethodDeclListE(
+              ) [MethodDeclListE]
+            ) [MethodDeclList1]
+          ) [MethodDeclList1]
+        ) [MethodDeclList1]
+      ) [ClassDeclConstructor]
+    ) [DeclClass]
+  ) [DeclList1]
+  MethodDeclList1(
+    MethodDeclType(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      VarDeclList1(
+        VarDeclOK(
+          Type(
+           char
+          ) [Type]
+          VarAssBr(
+           c
+          ) [VarAssBr]
+          VarAssListE(
+          ) [VarAssListE]
+        ) [VarDeclOK]
+        VarDeclList1(
+          VarDeclOK(
+            Type(
+             int
+            ) [Type]
+            VarAssBr(
+             flags
+            ) [VarAssBr]
+            VarAssList1(
+              VarAssListE(
+              ) [VarAssListE]
+              VarAssNo(
+               f
+              ) [VarAssNo]
+            ) [VarAssList1]
+          ) [VarDeclOK]
+          VarDeclList1(
+            VarDeclOK(
+              Type(
+               B
+              ) [Type]
+              VarAssNo(
+               b
+              ) [VarAssNo]
+              VarAssListE(
+              ) [VarAssListE]
+            ) [VarDeclOK]
+            VarDeclList1(
+              VarDeclOK(
+                Type(
+                 A
+                ) [Type]
+                VarAssNo(
+                 a
+                ) [VarAssNo]
+                VarAssListE(
+                ) [VarAssListE]
+              ) [VarDeclOK]
+              VarDeclListE(
+              ) [VarDeclListE]
+            ) [VarDeclList1]
+          ) [VarDeclList1]
+        ) [VarDeclList1]
+      ) [VarDeclList1]
+      StatementList1(
+        StatementList1(
+          StatementList1(
+            StatementListE(
+            ) [StatementListE]
+            StatementSingle(
+              SingleStatementIf(
+                ConditionOK(
+                  Condition1(
+                    CondTerm1(
+                      CondFactR(
+                        Expr1(
+                          Terms1(
+                            Term1(
+                              FactorNumConst(
+                               1
+                              ) [FactorNumConst]
+                            ) [Term1]
+                          ) [Terms1]
+                        ) [Expr1]
+                        RelopLT(
+                        ) [RelopLT]
+                        Expr1(
+                          Terms1(
+                            Term1(
+                              FactorNumConst(
+                               2
+                              ) [FactorNumConst]
+                            ) [Term1]
+                          ) [Terms1]
+                        ) [Expr1]
+                      ) [CondFactR]
+                    ) [CondTerm1]
+                  ) [Condition1]
+                ) [ConditionOK]
+                StatementStatements(
+                  Statements(
+                    StatementList1(
+                      StatementListE(
+                      ) [StatementListE]
+                      StatementSingle(
+                        SingleStatementDesignator(
+                          DesignatorStatementAssign(
+                            Designator(
+                              DesignatorIdentIdent(
+                               f
+                              ) [DesignatorIdentIdent]
+                              DesignatorListE(
+                              ) [DesignatorListE]
+                            ) [Designator]
+                            ExprError1(
+                              Expr1(
+                                Terms1(
+                                  Term1(
+                                    FactorNumConst(
+                                     1
+                                    ) [FactorNumConst]
+                                  ) [Term1]
+                                ) [Terms1]
+                              ) [Expr1]
+                            ) [ExprError1]
+                          ) [DesignatorStatementAssign]
+                        ) [SingleStatementDesignator]
+                      ) [StatementSingle]
+                    ) [StatementList1]
+                  ) [Statements]
+                ) [StatementStatements]
+              ) [SingleStatementIf]
+            ) [StatementSingle]
+          ) [StatementList1]
+          StatementSingle(
+            SingleStatementIf(
+              ConditionOK(
+                Condition1(
+                  CondTerm2(
+                    CondTerm1(
+                      CondFactE(
+                        Expr1(
+                          Terms1(
+                            Term1(
+                              FactorNumConst(
+                               3
+                              ) [FactorNumConst]
+                            ) [Term1]
+                          ) [Terms1]
+                        ) [Expr1]
+                      ) [CondFactE]
+                    ) [CondTerm1]
+                    CondFactE(
+                      Expr1(
+                        Terms1(
+                          Term1(
+                            FactorBoolConst(
+                             1
+                            ) [FactorBoolConst]
+                          ) [Term1]
+                        ) [Terms1]
+                      ) [Expr1]
+                    ) [CondFactE]
+                  ) [CondTerm2]
+                ) [Condition1]
+              ) [ConditionOK]
+              StatementStatements(
+                Statements(
+                  StatementList1(
+                    StatementListE(
+                    ) [StatementListE]
+                    StatementSingle(
+                      SingleStatementDesignator(
+                        DesignatorStatementAssign(
+                          Designator(
+                            DesignatorIdentIdent(
+                             f
+                            ) [DesignatorIdentIdent]
+                            DesignatorListE(
+                            ) [DesignatorListE]
+                          ) [Designator]
+                          ExprError1(
+                            Expr1(
+                              Terms1(
+                                Term1(
+                                  FactorNumConst(
+                                   2
+                                  ) [FactorNumConst]
+                                ) [Term1]
+                              ) [Terms1]
+                            ) [Expr1]
+                          ) [ExprError1]
+                        ) [DesignatorStatementAssign]
+                      ) [SingleStatementDesignator]
+                    ) [StatementSingle]
+                  ) [StatementList1]
+                ) [Statements]
+              ) [StatementStatements]
+            ) [SingleStatementIf]
+          ) [StatementSingle]
+        ) [StatementList1]
+        StatementSingle(
+          SingleStatementRead(
+            Designator(
+              DesignatorIdentIdent(
+               c
+              ) [DesignatorIdentIdent]
+              DesignatorList1(
+                DesignatorListE(
+                ) [DesignatorListE]
+                DesignatorEExpr(
+                  Expr1(
+                    Terms1(
+                      Term1(
+                        FactorNumConst(
+                         1
+                        ) [FactorNumConst]
+                      ) [Term1]
+                    ) [Terms1]
+                  ) [Expr1]
+                ) [DesignatorEExpr]
+              ) [DesignatorList1]
+            ) [Designator]
+          ) [SingleStatementRead]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclType]
+    MethodDeclListE(
+    ) [MethodDeclListE]
+  ) [MethodDeclList1]
+) [Program]
+INFO  20:48:58,231 - ===================================
+INFO  20:48:58,240 - Deklarisana promenljiva x na liniji 2
+INFO  20:48:58,240 - Deklarisana promenljiva y na liniji 2
+INFO  20:48:58,240 - Deklarisana konstanta a na liniji 3
+INFO  20:48:58,240 - Deklarisana konstanta z na liniji 3
+INFO  20:48:58,240 - Deklarisana konstanta u na liniji 4
+INFO  20:48:58,240 - Deklarisana promenljiva x na liniji 7
+INFO  20:48:58,240 - Deklarisana promenljiva t na liniji 7
+INFO  20:48:58,240 - Deklarisana promenljiva t2 na liniji 7
+INFO  20:48:58,240 - Deklarisana promenljiva t3 na liniji 7
+INFO  20:48:58,240 - Deklarisana promenljiva x na liniji 11
+INFO  20:48:58,240 - Deklarisana promenljiva y na liniji 11
+INFO  20:48:58,245 - Deklarisana promenljiva w na liniji 18
+INFO  20:48:58,245 - Deklarisana promenljiva x na liniji 25
+INFO  20:48:58,245 - Deklarisana promenljiva c[] na liniji 38
+INFO  20:48:58,245 - Deklarisana promenljiva flags[] na liniji 38
+INFO  20:48:58,245 - Deklarisana promenljiva f na liniji 38
+INFO  20:48:58,245 - Deklarisana promenljiva b na liniji 38
+INFO  20:48:58,245 - Deklarisana promenljiva a na liniji 38
+ERROR 20:48:58,245 - Uslov nije tipa bool na liniji 43
+INFO  20:48:58,245 - ===================================
+INFO  20:48:58,245 - Parsiranje nije uspesno!
