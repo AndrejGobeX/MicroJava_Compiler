@@ -82,6 +82,30 @@ public class CodeGenerator extends VisitorAdaptor {
             Code.put(Code.print);
     }
 
+    /* Designator */
+
+    public void visit(DesignatorIdentIdent designatorIdent){
+        if(!(designatorIdent.getParent() instanceof DesignatorStatementAssign)){
+            Code.load(designatorIdent.obj);
+        }
+    }
+
+    public void visit(DesignatorIdentSuper designatorIdent){
+        if(!(designatorIdent.getParent() instanceof DesignatorStatementAssign)){
+            Code.load(designatorIdent.obj);
+        }
+    }
+
+    public void visit(DesignatorIdentThis designatorIdent){
+        if(!(designatorIdent.getParent() instanceof DesignatorStatementAssign)){
+            Code.load(designatorIdent.obj);
+        }
+    }
+
+    public void visit(DesignatorStatementAssign designatorStatement){
+        Code.store(designatorStatement.getDesignator().obj);
+    }
+
     /* Method */
 
     public void visit(MethodName methodName){
@@ -118,5 +142,9 @@ public class CodeGenerator extends VisitorAdaptor {
 
     public void visit(FactorBoolConst factor){
         Code.loadConst(factor.getB1());
+    }
+
+    public void visit(FactorNew factor){
+
     }
 }

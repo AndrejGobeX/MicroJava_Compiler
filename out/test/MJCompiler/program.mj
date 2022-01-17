@@ -1,9 +1,11 @@
 program Pera
+int x;
 {
 	void main()
 	{
-	    print(788);
-	    print('X');
+	    x = 79;
+	    print(x);
+	    print('X', 2);
 	}
 
 }

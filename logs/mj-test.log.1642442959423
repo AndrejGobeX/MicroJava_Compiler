@@ -1,0 +1,79 @@
+INFO  18:55:58,130 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  18:55:58,605 - #2 program
+INFO  18:55:58,605 - #48 Pera
+INFO  18:55:58,605 - #43 {
+INFO  18:55:58,615 - #17 void
+INFO  18:55:58,615 - #48 main
+INFO  18:55:58,615 - #41 (
+INFO  18:55:58,620 - #42 )
+INFO  18:55:58,620 - #43 {
+INFO  18:55:58,625 - #14 print
+INFO  18:55:58,630 - #41 (
+INFO  18:55:58,630 - #47 788
+INFO  18:55:58,630 - #42 )
+INFO  18:55:58,630 - #37 ;
+INFO  18:55:58,630 - #14 print
+INFO  18:55:58,630 - #41 (
+INFO  18:55:58,630 - #49 X
+INFO  18:55:58,630 - #39 ,
+INFO  18:55:58,630 - #47 2
+INFO  18:55:58,630 - #42 )
+INFO  18:55:58,630 - #37 ;
+INFO  18:55:58,635 - #44 }
+INFO  18:55:58,635 - #44 }
+INFO  18:55:58,660 - Program(
+  ProgName(
+   Pera
+  ) [ProgName]
+  DeclListE(
+  ) [DeclListE]
+  MethodDeclList1(
+    MethodDeclType(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      VarDeclListE(
+      ) [VarDeclListE]
+      StatementList1(
+        StatementList1(
+          StatementListE(
+          ) [StatementListE]
+          StatementSingle(
+            SingleStatementPrint(
+              Expr1(
+                Terms1(
+                  Term1(
+                    FactorNumConst(
+                     788
+                    ) [FactorNumConst]
+                  ) [Term1]
+                ) [Terms1]
+              ) [Expr1]
+            ) [SingleStatementPrint]
+          ) [StatementSingle]
+        ) [StatementList1]
+        StatementSingle(
+          SingleStatementPrintNum(
+            Expr1(
+              Terms1(
+                Term1(
+                  FactorCharConst(
+                   X
+                  ) [FactorCharConst]
+                ) [Term1]
+              ) [Terms1]
+            ) [Expr1]
+           2
+          ) [SingleStatementPrintNum]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclType]
+    MethodDeclListE(
+    ) [MethodDeclListE]
+  ) [MethodDeclList1]
+) [Program]
+INFO  18:55:58,660 - ===================================
+INFO  18:55:58,675 - ===================================
+INFO  18:55:58,689 - Parsiranje uspesno zavrseno!

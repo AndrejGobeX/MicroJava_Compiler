@@ -1,0 +1,76 @@
+INFO  18:51:08,775 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  18:51:09,072 - #2 program
+INFO  18:51:09,072 - #48 Pera
+INFO  18:51:09,072 - #43 {
+INFO  18:51:09,072 - #17 void
+INFO  18:51:09,072 - #48 main
+INFO  18:51:09,080 - #41 (
+INFO  18:51:09,080 - #42 )
+INFO  18:51:09,080 - #43 {
+INFO  18:51:09,085 - #14 print
+INFO  18:51:09,088 - #41 (
+INFO  18:51:09,088 - #47 788
+INFO  18:51:09,088 - #42 )
+INFO  18:51:09,088 - #37 ;
+INFO  18:51:09,088 - #14 print
+INFO  18:51:09,090 - #41 (
+INFO  18:51:09,090 - #49 X
+INFO  18:51:09,090 - #42 )
+INFO  18:51:09,090 - #37 ;
+INFO  18:51:09,090 - #44 }
+INFO  18:51:09,090 - #44 }
+INFO  18:51:09,110 - Program(
+  ProgName(
+   Pera
+  ) [ProgName]
+  DeclListE(
+  ) [DeclListE]
+  MethodDeclList1(
+    MethodDeclType(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      VarDeclListE(
+      ) [VarDeclListE]
+      StatementList1(
+        StatementList1(
+          StatementListE(
+          ) [StatementListE]
+          StatementSingle(
+            SingleStatementPrint(
+              Expr1(
+                Terms1(
+                  Term1(
+                    FactorNumConst(
+                     788
+                    ) [FactorNumConst]
+                  ) [Term1]
+                ) [Terms1]
+              ) [Expr1]
+            ) [SingleStatementPrint]
+          ) [StatementSingle]
+        ) [StatementList1]
+        StatementSingle(
+          SingleStatementPrint(
+            Expr1(
+              Terms1(
+                Term1(
+                  FactorCharConst(
+                   X
+                  ) [FactorCharConst]
+                ) [Term1]
+              ) [Terms1]
+            ) [Expr1]
+          ) [SingleStatementPrint]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclType]
+    MethodDeclListE(
+    ) [MethodDeclListE]
+  ) [MethodDeclList1]
+) [Program]
+INFO  18:51:09,110 - ===================================
+INFO  18:51:09,120 - ===================================
+INFO  18:51:09,130 - Parsiranje uspesno zavrseno!

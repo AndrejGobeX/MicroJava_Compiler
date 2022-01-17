@@ -1,0 +1,96 @@
+INFO  19:09:19,450 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  19:09:19,873 - #2 program
+INFO  19:09:19,873 - #48 Pera
+INFO  19:09:19,873 - #48 int
+INFO  19:09:19,878 - #48 x
+INFO  19:09:19,883 - #37 ;
+INFO  19:09:19,883 - #43 {
+INFO  19:09:19,883 - #17 void
+INFO  19:09:19,888 - #48 main
+INFO  19:09:19,888 - #41 (
+INFO  19:09:19,893 - #42 )
+INFO  19:09:19,893 - #43 {
+INFO  19:09:19,893 - #14 print
+INFO  19:09:19,898 - #41 (
+INFO  19:09:19,898 - #47 788
+INFO  19:09:19,898 - #42 )
+INFO  19:09:19,898 - #37 ;
+INFO  19:09:19,898 - #14 print
+INFO  19:09:19,903 - #41 (
+INFO  19:09:19,903 - #49 X
+INFO  19:09:19,903 - #39 ,
+INFO  19:09:19,903 - #47 2
+INFO  19:09:19,903 - #42 )
+INFO  19:09:19,903 - #37 ;
+INFO  19:09:19,903 - #44 }
+INFO  19:09:19,903 - #44 }
+INFO  19:09:19,928 - Program(
+  ProgName(
+   Pera
+  ) [ProgName]
+  DeclList1(
+    DeclListE(
+    ) [DeclListE]
+    DeclVar(
+      VarDeclOK(
+        Type(
+         int
+        ) [Type]
+        VarAssNo(
+         x
+        ) [VarAssNo]
+        VarAssListE(
+        ) [VarAssListE]
+      ) [VarDeclOK]
+    ) [DeclVar]
+  ) [DeclList1]
+  MethodDeclList1(
+    MethodDeclType(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      VarDeclListE(
+      ) [VarDeclListE]
+      StatementList1(
+        StatementList1(
+          StatementListE(
+          ) [StatementListE]
+          StatementSingle(
+            SingleStatementPrint(
+              Expr1(
+                Terms1(
+                  Term1(
+                    FactorNumConst(
+                     788
+                    ) [FactorNumConst]
+                  ) [Term1]
+                ) [Terms1]
+              ) [Expr1]
+            ) [SingleStatementPrint]
+          ) [StatementSingle]
+        ) [StatementList1]
+        StatementSingle(
+          SingleStatementPrintNum(
+            Expr1(
+              Terms1(
+                Term1(
+                  FactorCharConst(
+                   X
+                  ) [FactorCharConst]
+                ) [Term1]
+              ) [Terms1]
+            ) [Expr1]
+           2
+          ) [SingleStatementPrintNum]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclType]
+    MethodDeclListE(
+    ) [MethodDeclListE]
+  ) [MethodDeclList1]
+) [Program]
+INFO  19:09:19,928 - ===================================
+INFO  19:09:19,943 - ===================================
+INFO  19:09:19,963 - Parsiranje uspesno zavrseno!
