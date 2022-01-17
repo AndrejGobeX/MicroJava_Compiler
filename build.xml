@@ -7,13 +7,10 @@
 				<exclude name="Yylex.java"/>
 				<exclude name="CounterVisitor.java"/>
 				<exclude name="SemanticAnalyzer.java"/>
-				<exclude name="MyDumpSymbolTableVisitor.java"/>
 				<exclude name="Compiler.java"/>
 				<exclude name="sym_old.java"/>
-				<exclude name="RuleVisitor.java"/>
 				<exclude name="util/Log4JUtils.java"/>
 				<exclude name="CodeGenerator.java"/>
-				<exclude name="MyTab.java"/>
 			</fileset>
 		</delete>
 		<delete>

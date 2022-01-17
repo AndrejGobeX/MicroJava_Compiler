@@ -1,275 +1,275 @@
-INFO  17:34:07,310 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
-INFO  17:34:07,790 - #2 program
-INFO  17:34:07,790 - #48 Pera
-INFO  17:34:07,790 - #48 int
-INFO  17:34:07,795 - #48 x
-INFO  17:34:07,800 - #39 ,
-INFO  17:34:07,800 - #48 y
-INFO  17:34:07,800 - #37 ;
-INFO  17:34:07,800 - #7 const
-INFO  17:34:07,800 - #48 int
-INFO  17:34:07,800 - #48 a
-INFO  17:34:07,800 - #36 =
-INFO  17:34:07,805 - #47 5
-INFO  17:34:07,805 - #39 ,
-INFO  17:34:07,805 - #48 z
-INFO  17:34:07,805 - #36 =
-INFO  17:34:07,805 - #47 79
-INFO  17:34:07,805 - #37 ;
-INFO  17:34:07,805 - #7 const
-INFO  17:34:07,810 - #48 int
-INFO  17:34:07,810 - #48 u
-INFO  17:34:07,810 - #36 =
-INFO  17:34:07,810 - #47 7
-INFO  17:34:07,810 - #37 ;
-INFO  17:34:07,810 - #20 record
-INFO  17:34:07,810 - #48 R
-INFO  17:34:07,810 - #43 {
-INFO  17:34:07,815 - #48 int
-INFO  17:34:07,815 - #48 x
-INFO  17:34:07,815 - #39 ,
-INFO  17:34:07,815 - #48 t
-INFO  17:34:07,815 - #39 ,
-INFO  17:34:07,815 - #48 t2
-INFO  17:34:07,815 - #39 ,
-INFO  17:34:07,815 - #48 t3
-INFO  17:34:07,815 - #37 ;
-INFO  17:34:07,815 - #44 }
-INFO  17:34:07,815 - #4 class
-INFO  17:34:07,820 - #48 A
-INFO  17:34:07,820 - #43 {
-INFO  17:34:07,820 - #48 int
-INFO  17:34:07,820 - #48 x
-INFO  17:34:07,820 - #39 ,
-INFO  17:34:07,820 - #48 y
-INFO  17:34:07,820 - #37 ;
-INFO  17:34:07,820 - #43 {
-INFO  17:34:07,820 - #48 A
-INFO  17:34:07,820 - #41 (
-INFO  17:34:07,820 - #42 )
-INFO  17:34:07,820 - #43 {
-INFO  17:34:07,820 - #44 }
-INFO  17:34:07,830 - #48 int
-INFO  17:34:07,830 - #48 prin
-INFO  17:34:07,830 - #41 (
-INFO  17:34:07,830 - #42 )
-INFO  17:34:07,830 - #43 {
-INFO  17:34:07,830 - #16 return
-INFO  17:34:07,830 - #47 15
-INFO  17:34:07,830 - #37 ;
-INFO  17:34:07,830 - #44 }
-INFO  17:34:07,830 - #44 }
-INFO  17:34:07,840 - #44 }
-INFO  17:34:07,840 - #4 class
-INFO  17:34:07,840 - #48 B
-INFO  17:34:07,840 - #18 extends
-INFO  17:34:07,840 - #48 A
-INFO  17:34:07,840 - #43 {
-INFO  17:34:07,840 - #48 int
-INFO  17:34:07,840 - #48 w
-INFO  17:34:07,840 - #37 ;
-INFO  17:34:07,840 - #43 {
-INFO  17:34:07,840 - #48 B
-INFO  17:34:07,840 - #41 (
-INFO  17:34:07,840 - #42 )
-INFO  17:34:07,840 - #43 {
-INFO  17:34:07,840 - #44 }
-INFO  17:34:07,840 - #48 int
-INFO  17:34:07,840 - #48 prin
-INFO  17:34:07,840 - #41 (
-INFO  17:34:07,840 - #42 )
-INFO  17:34:07,840 - #43 {
-INFO  17:34:07,840 - #48 w
-INFO  17:34:07,840 - #36 =
-INFO  17:34:07,850 - #10 super
-INFO  17:34:07,850 - #41 (
-INFO  17:34:07,860 - #42 )
-INFO  17:34:07,860 - #37 ;
-INFO  17:34:07,860 - #16 return
-INFO  17:34:07,860 - #48 w
-INFO  17:34:07,865 - #37 ;
-INFO  17:34:07,865 - #44 }
-INFO  17:34:07,865 - #48 int
-INFO  17:34:07,865 - #48 haha
-INFO  17:34:07,870 - #41 (
-INFO  17:34:07,870 - #48 char
-INFO  17:34:07,870 - #48 x
-INFO  17:34:07,870 - #42 )
-INFO  17:34:07,875 - #43 {
-INFO  17:34:07,875 - #16 return
-INFO  17:34:07,875 - #47 15
-INFO  17:34:07,875 - #37 ;
-INFO  17:34:07,880 - #44 }
-INFO  17:34:07,880 - #48 int
-INFO  17:34:07,880 - #48 f
-INFO  17:34:07,880 - #41 (
-INFO  17:34:07,880 - #42 )
-INFO  17:34:07,880 - #43 {
-INFO  17:34:07,880 - #16 return
-INFO  17:34:07,880 - #47 15
-INFO  17:34:07,880 - #37 ;
-INFO  17:34:07,880 - #44 }
-INFO  17:34:07,880 - #17 void
-INFO  17:34:07,880 - #48 testic
-INFO  17:34:07,890 - #41 (
-INFO  17:34:07,890 - #48 A
-INFO  17:34:07,890 - #48 a
-INFO  17:34:07,890 - #39 ,
-INFO  17:34:07,890 - #48 int
-INFO  17:34:07,890 - #48 x
-INFO  17:34:07,890 - #42 )
-INFO  17:34:07,890 - #43 {
-INFO  17:34:07,890 - #48 x
-INFO  17:34:07,890 - #36 =
-INFO  17:34:07,890 - #48 x
-INFO  17:34:07,890 - #37 ;
-INFO  17:34:07,890 - #44 }
-INFO  17:34:07,890 - #48 A
-INFO  17:34:07,890 - #48 nessss
-INFO  17:34:07,890 - #41 (
-INFO  17:34:07,890 - #42 )
-INFO  17:34:07,890 - #43 {
-INFO  17:34:07,890 - #16 return
-INFO  17:34:07,890 - #13 new
-INFO  17:34:07,890 - #48 A
-INFO  17:34:07,890 - #37 ;
-INFO  17:34:07,898 - #44 }
-INFO  17:34:07,898 - #44 }
-INFO  17:34:07,898 - #44 }
-INFO  17:34:07,898 - #43 {
-INFO  17:34:07,898 - #48 int
-INFO  17:34:07,900 - #48 globalna
-INFO  17:34:07,900 - #41 (
-INFO  17:34:07,900 - #42 )
-INFO  17:34:07,900 - #43 {
-INFO  17:34:07,900 - #16 return
-INFO  17:34:07,900 - #47 7
-INFO  17:34:07,900 - #37 ;
-INFO  17:34:07,900 - #44 }
-INFO  17:34:07,900 - #48 int
-INFO  17:34:07,900 - #48 gl
-INFO  17:34:07,900 - #41 (
-INFO  17:34:07,900 - #48 int
-INFO  17:34:07,900 - #48 x
-INFO  17:34:07,900 - #42 )
-INFO  17:34:07,900 - #43 {
-INFO  17:34:07,900 - #16 return
-INFO  17:34:07,900 - #48 x
-INFO  17:34:07,900 - #37 ;
-INFO  17:34:07,900 - #44 }
-INFO  17:34:07,900 - #17 void
-INFO  17:34:07,900 - #48 main
-INFO  17:34:07,900 - #41 (
-INFO  17:34:07,900 - #42 )
-INFO  17:34:07,900 - #48 char
-INFO  17:34:07,900 - #48 c
-INFO  17:34:07,900 - #45 [
-INFO  17:34:07,900 - #46 ]
-INFO  17:34:07,900 - #37 ;
-INFO  17:34:07,900 - #48 int
-INFO  17:34:07,900 - #48 flags
-INFO  17:34:07,900 - #45 [
-INFO  17:34:07,900 - #46 ]
-INFO  17:34:07,900 - #39 ,
-INFO  17:34:07,900 - #48 f
-INFO  17:34:07,900 - #37 ;
-INFO  17:34:07,900 - #48 B
-INFO  17:34:07,900 - #48 b
-INFO  17:34:07,900 - #37 ;
-INFO  17:34:07,900 - #48 A
-INFO  17:34:07,900 - #48 a
-INFO  17:34:07,900 - #37 ;
-INFO  17:34:07,900 - #43 {
-INFO  17:34:07,900 - #8 if
-INFO  17:34:07,900 - #41 (
-INFO  17:34:07,900 - #47 1
-INFO  17:34:07,900 - #33 <
-INFO  17:34:07,900 - #47 2
-INFO  17:34:07,910 - #42 )
-INFO  17:34:07,910 - #43 {
-INFO  17:34:07,910 - #48 f
-INFO  17:34:07,910 - #36 =
-INFO  17:34:07,910 - #47 1
-INFO  17:34:07,910 - #37 ;
-INFO  17:34:07,910 - #44 }
-INFO  17:34:07,910 - #8 if
-INFO  17:34:07,910 - #41 (
-INFO  17:34:07,910 - #47 2
-INFO  17:34:07,910 - #31 >
-INFO  17:34:07,910 - #47 3
-INFO  17:34:07,920 - #34 &&
-INFO  17:34:07,920 - #50 1
-INFO  17:34:07,920 - #42 )
-INFO  17:34:07,920 - #43 {
-INFO  17:34:07,920 - #48 f
-INFO  17:34:07,920 - #36 =
-INFO  17:34:07,920 - #47 2
-INFO  17:34:07,920 - #37 ;
-INFO  17:34:07,920 - #44 }
-INFO  17:34:07,920 - #48 f
-INFO  17:34:07,920 - #36 =
-INFO  17:34:07,928 - #48 globalna
-INFO  17:34:07,928 - #41 (
-INFO  17:34:07,928 - #42 )
-INFO  17:34:07,928 - #37 ;
-INFO  17:34:07,928 - #48 b
-INFO  17:34:07,928 - #40 .
-INFO  17:34:07,928 - #48 testic
-INFO  17:34:07,928 - #41 (
-INFO  17:34:07,930 - #48 b
-INFO  17:34:07,930 - #39 ,
-INFO  17:34:07,930 - #47 4
-INFO  17:34:07,930 - #42 )
-INFO  17:34:07,930 - #37 ;
-INFO  17:34:07,930 - #48 a
-INFO  17:34:07,930 - #36 =
-INFO  17:34:07,930 - #13 new
-INFO  17:34:07,930 - #48 A
-INFO  17:34:07,930 - #37 ;
-INFO  17:34:07,930 - #48 f
-INFO  17:34:07,930 - #36 =
-INFO  17:34:07,930 - #48 flags
-INFO  17:34:07,930 - #45 [
-INFO  17:34:07,930 - #47 3
-INFO  17:34:07,930 - #46 ]
-INFO  17:34:07,930 - #37 ;
-INFO  17:34:07,930 - #48 a
-INFO  17:34:07,930 - #36 =
-INFO  17:34:07,930 - #48 null
-INFO  17:34:07,930 - #37 ;
-INFO  17:34:07,930 - #48 f
-INFO  17:34:07,930 - #36 =
-INFO  17:34:07,930 - #48 ord
-INFO  17:34:07,935 - #41 (
-INFO  17:34:07,935 - #49 c
-INFO  17:34:07,935 - #42 )
-INFO  17:34:07,935 - #37 ;
-INFO  17:34:07,935 - #48 c
-INFO  17:34:07,935 - #45 [
-INFO  17:34:07,935 - #47 1
-INFO  17:34:07,935 - #46 ]
-INFO  17:34:07,935 - #36 =
-INFO  17:34:07,935 - #48 chr
-INFO  17:34:07,935 - #41 (
-INFO  17:34:07,940 - #48 f
-INFO  17:34:07,940 - #42 )
-INFO  17:34:07,940 - #37 ;
-INFO  17:34:07,945 - #48 len
-INFO  17:34:07,945 - #41 (
-INFO  17:34:07,945 - #48 c
-INFO  17:34:07,945 - #42 )
-INFO  17:34:07,945 - #37 ;
-INFO  17:34:07,945 - #15 read
-INFO  17:34:07,945 - #41 (
-INFO  17:34:07,945 - #48 c
-INFO  17:34:07,945 - #45 [
-INFO  17:34:07,945 - #47 1
-INFO  17:34:07,945 - #46 ]
-INFO  17:34:07,945 - #42 )
-INFO  17:34:07,945 - #37 ;
-INFO  17:34:07,945 - #44 }
-INFO  17:34:07,945 - #44 }
-INFO  17:34:07,985 - Program(
+INFO  17:20:47,469 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  17:20:47,873 - #2 program
+INFO  17:20:47,873 - #48 Pera
+INFO  17:20:47,873 - #48 int
+INFO  17:20:47,881 - #48 x
+INFO  17:20:47,883 - #39 ,
+INFO  17:20:47,883 - #48 y
+INFO  17:20:47,883 - #37 ;
+INFO  17:20:47,883 - #7 const
+INFO  17:20:47,883 - #48 int
+INFO  17:20:47,883 - #48 a
+INFO  17:20:47,883 - #36 =
+INFO  17:20:47,883 - #47 5
+INFO  17:20:47,883 - #39 ,
+INFO  17:20:47,893 - #48 z
+INFO  17:20:47,893 - #36 =
+INFO  17:20:47,893 - #47 79
+INFO  17:20:47,893 - #37 ;
+INFO  17:20:47,893 - #7 const
+INFO  17:20:47,893 - #48 int
+INFO  17:20:47,893 - #48 u
+INFO  17:20:47,893 - #36 =
+INFO  17:20:47,893 - #47 7
+INFO  17:20:47,893 - #37 ;
+INFO  17:20:47,893 - #20 record
+INFO  17:20:47,893 - #48 R
+INFO  17:20:47,893 - #43 {
+INFO  17:20:47,903 - #48 int
+INFO  17:20:47,903 - #48 x
+INFO  17:20:47,903 - #39 ,
+INFO  17:20:47,903 - #48 t
+INFO  17:20:47,903 - #39 ,
+INFO  17:20:47,903 - #48 t2
+INFO  17:20:47,903 - #39 ,
+INFO  17:20:47,903 - #48 t3
+INFO  17:20:47,903 - #37 ;
+INFO  17:20:47,903 - #44 }
+INFO  17:20:47,903 - #4 class
+INFO  17:20:47,914 - #48 A
+INFO  17:20:47,914 - #43 {
+INFO  17:20:47,914 - #48 int
+INFO  17:20:47,914 - #48 x
+INFO  17:20:47,914 - #39 ,
+INFO  17:20:47,918 - #48 y
+INFO  17:20:47,918 - #37 ;
+INFO  17:20:47,918 - #43 {
+INFO  17:20:47,918 - #48 A
+INFO  17:20:47,918 - #41 (
+INFO  17:20:47,923 - #42 )
+INFO  17:20:47,923 - #43 {
+INFO  17:20:47,923 - #44 }
+INFO  17:20:47,923 - #48 int
+INFO  17:20:47,923 - #48 prin
+INFO  17:20:47,923 - #41 (
+INFO  17:20:47,923 - #42 )
+INFO  17:20:47,923 - #43 {
+INFO  17:20:47,923 - #16 return
+INFO  17:20:47,923 - #47 15
+INFO  17:20:47,923 - #37 ;
+INFO  17:20:47,923 - #44 }
+INFO  17:20:47,933 - #44 }
+INFO  17:20:47,933 - #44 }
+INFO  17:20:47,933 - #4 class
+INFO  17:20:47,933 - #48 B
+INFO  17:20:47,933 - #18 extends
+INFO  17:20:47,933 - #48 A
+INFO  17:20:47,933 - #43 {
+INFO  17:20:47,933 - #48 int
+INFO  17:20:47,933 - #48 w
+INFO  17:20:47,933 - #37 ;
+INFO  17:20:47,933 - #43 {
+INFO  17:20:47,933 - #48 B
+INFO  17:20:47,933 - #41 (
+INFO  17:20:47,933 - #42 )
+INFO  17:20:47,933 - #43 {
+INFO  17:20:47,933 - #44 }
+INFO  17:20:47,933 - #48 int
+INFO  17:20:47,933 - #48 prin
+INFO  17:20:47,933 - #41 (
+INFO  17:20:47,933 - #42 )
+INFO  17:20:47,933 - #43 {
+INFO  17:20:47,933 - #48 w
+INFO  17:20:47,933 - #36 =
+INFO  17:20:47,943 - #10 super
+INFO  17:20:47,943 - #41 (
+INFO  17:20:47,943 - #42 )
+INFO  17:20:47,943 - #37 ;
+INFO  17:20:47,943 - #16 return
+INFO  17:20:47,943 - #48 w
+INFO  17:20:47,943 - #37 ;
+INFO  17:20:47,943 - #44 }
+INFO  17:20:47,943 - #48 int
+INFO  17:20:47,943 - #48 haha
+INFO  17:20:47,953 - #41 (
+INFO  17:20:47,953 - #48 char
+INFO  17:20:47,953 - #48 x
+INFO  17:20:47,953 - #42 )
+INFO  17:20:47,953 - #43 {
+INFO  17:20:47,953 - #16 return
+INFO  17:20:47,953 - #47 15
+INFO  17:20:47,953 - #37 ;
+INFO  17:20:47,953 - #44 }
+INFO  17:20:47,953 - #48 int
+INFO  17:20:47,953 - #48 f
+INFO  17:20:47,953 - #41 (
+INFO  17:20:47,953 - #42 )
+INFO  17:20:47,953 - #43 {
+INFO  17:20:47,953 - #16 return
+INFO  17:20:47,953 - #47 15
+INFO  17:20:47,953 - #37 ;
+INFO  17:20:47,953 - #44 }
+INFO  17:20:47,953 - #17 void
+INFO  17:20:47,953 - #48 testic
+INFO  17:20:47,958 - #41 (
+INFO  17:20:47,958 - #48 A
+INFO  17:20:47,958 - #48 a
+INFO  17:20:47,958 - #39 ,
+INFO  17:20:47,958 - #48 int
+INFO  17:20:47,958 - #48 x
+INFO  17:20:47,958 - #42 )
+INFO  17:20:47,958 - #43 {
+INFO  17:20:47,958 - #48 x
+INFO  17:20:47,958 - #36 =
+INFO  17:20:47,958 - #48 x
+INFO  17:20:47,958 - #37 ;
+INFO  17:20:47,958 - #44 }
+INFO  17:20:47,958 - #48 A
+INFO  17:20:47,958 - #48 nessss
+INFO  17:20:47,958 - #41 (
+INFO  17:20:47,958 - #42 )
+INFO  17:20:47,958 - #43 {
+INFO  17:20:47,958 - #16 return
+INFO  17:20:47,958 - #13 new
+INFO  17:20:47,958 - #48 A
+INFO  17:20:47,958 - #37 ;
+INFO  17:20:47,963 - #44 }
+INFO  17:20:47,963 - #44 }
+INFO  17:20:47,963 - #44 }
+INFO  17:20:47,963 - #43 {
+INFO  17:20:47,963 - #48 int
+INFO  17:20:47,963 - #48 globalna
+INFO  17:20:47,963 - #41 (
+INFO  17:20:47,963 - #42 )
+INFO  17:20:47,963 - #43 {
+INFO  17:20:47,963 - #16 return
+INFO  17:20:47,963 - #47 7
+INFO  17:20:47,963 - #37 ;
+INFO  17:20:47,963 - #44 }
+INFO  17:20:47,963 - #48 int
+INFO  17:20:47,963 - #48 gl
+INFO  17:20:47,963 - #41 (
+INFO  17:20:47,963 - #48 int
+INFO  17:20:47,963 - #48 x
+INFO  17:20:47,963 - #42 )
+INFO  17:20:47,963 - #43 {
+INFO  17:20:47,963 - #16 return
+INFO  17:20:47,963 - #48 x
+INFO  17:20:47,963 - #37 ;
+INFO  17:20:47,963 - #44 }
+INFO  17:20:47,963 - #17 void
+INFO  17:20:47,963 - #48 main
+INFO  17:20:47,963 - #41 (
+INFO  17:20:47,963 - #42 )
+INFO  17:20:47,963 - #48 char
+INFO  17:20:47,963 - #48 c
+INFO  17:20:47,963 - #45 [
+INFO  17:20:47,963 - #46 ]
+INFO  17:20:47,963 - #37 ;
+INFO  17:20:47,963 - #48 int
+INFO  17:20:47,963 - #48 flags
+INFO  17:20:47,963 - #45 [
+INFO  17:20:47,963 - #46 ]
+INFO  17:20:47,963 - #39 ,
+INFO  17:20:47,963 - #48 f
+INFO  17:20:47,963 - #37 ;
+INFO  17:20:47,963 - #48 B
+INFO  17:20:47,963 - #48 b
+INFO  17:20:47,963 - #37 ;
+INFO  17:20:47,963 - #48 A
+INFO  17:20:47,963 - #48 a
+INFO  17:20:47,963 - #37 ;
+INFO  17:20:47,963 - #43 {
+INFO  17:20:47,963 - #8 if
+INFO  17:20:47,963 - #41 (
+INFO  17:20:47,963 - #47 1
+INFO  17:20:47,963 - #33 <
+INFO  17:20:47,963 - #47 2
+INFO  17:20:47,973 - #42 )
+INFO  17:20:47,973 - #43 {
+INFO  17:20:47,973 - #48 f
+INFO  17:20:47,973 - #36 =
+INFO  17:20:47,973 - #47 1
+INFO  17:20:47,973 - #37 ;
+INFO  17:20:47,973 - #44 }
+INFO  17:20:47,973 - #8 if
+INFO  17:20:47,978 - #41 (
+INFO  17:20:47,978 - #47 2
+INFO  17:20:47,978 - #31 >
+INFO  17:20:47,978 - #47 3
+INFO  17:20:47,983 - #34 &&
+INFO  17:20:47,983 - #50 1
+INFO  17:20:47,983 - #42 )
+INFO  17:20:47,983 - #43 {
+INFO  17:20:47,983 - #48 f
+INFO  17:20:47,983 - #36 =
+INFO  17:20:47,983 - #47 2
+INFO  17:20:47,983 - #37 ;
+INFO  17:20:47,983 - #44 }
+INFO  17:20:47,983 - #48 f
+INFO  17:20:47,983 - #36 =
+INFO  17:20:47,983 - #48 globalna
+INFO  17:20:47,983 - #41 (
+INFO  17:20:47,983 - #42 )
+INFO  17:20:47,983 - #37 ;
+INFO  17:20:47,983 - #48 b
+INFO  17:20:47,983 - #40 .
+INFO  17:20:47,983 - #48 testic
+INFO  17:20:47,983 - #41 (
+INFO  17:20:47,983 - #48 b
+INFO  17:20:47,983 - #39 ,
+INFO  17:20:47,983 - #47 4
+INFO  17:20:47,983 - #42 )
+INFO  17:20:47,983 - #37 ;
+INFO  17:20:47,983 - #48 a
+INFO  17:20:47,983 - #36 =
+INFO  17:20:47,983 - #13 new
+INFO  17:20:47,983 - #48 A
+INFO  17:20:47,983 - #37 ;
+INFO  17:20:47,983 - #48 f
+INFO  17:20:47,983 - #36 =
+INFO  17:20:47,983 - #48 flags
+INFO  17:20:47,983 - #45 [
+INFO  17:20:47,983 - #47 3
+INFO  17:20:47,983 - #46 ]
+INFO  17:20:47,983 - #37 ;
+INFO  17:20:47,983 - #48 a
+INFO  17:20:47,983 - #36 =
+INFO  17:20:47,983 - #48 null
+INFO  17:20:47,983 - #37 ;
+INFO  17:20:47,983 - #48 f
+INFO  17:20:47,983 - #36 =
+INFO  17:20:47,983 - #48 ord
+INFO  17:20:47,983 - #41 (
+INFO  17:20:47,983 - #49 c
+INFO  17:20:47,983 - #42 )
+INFO  17:20:47,983 - #37 ;
+INFO  17:20:47,983 - #48 c
+INFO  17:20:47,983 - #45 [
+INFO  17:20:47,983 - #47 1
+INFO  17:20:47,983 - #46 ]
+INFO  17:20:47,983 - #36 =
+INFO  17:20:47,983 - #48 chr
+INFO  17:20:47,983 - #41 (
+INFO  17:20:47,983 - #48 f
+INFO  17:20:47,983 - #42 )
+INFO  17:20:47,983 - #37 ;
+INFO  17:20:47,983 - #48 len
+INFO  17:20:47,983 - #41 (
+INFO  17:20:47,993 - #48 c
+INFO  17:20:47,993 - #42 )
+INFO  17:20:47,993 - #37 ;
+INFO  17:20:47,993 - #15 read
+INFO  17:20:47,993 - #41 (
+INFO  17:20:47,993 - #48 c
+INFO  17:20:47,993 - #45 [
+INFO  17:20:47,993 - #47 1
+INFO  17:20:47,993 - #46 ]
+INFO  17:20:47,993 - #42 )
+INFO  17:20:47,993 - #37 ;
+INFO  17:20:47,993 - #44 }
+INFO  17:20:47,993 - #44 }
+INFO  17:20:48,031 - Program(
   ProgName(
    Pera
   ) [ProgName]
@@ -1337,39 +1337,40 @@ INFO  17:34:07,985 - Program(
     ) [MethodDeclList1]
   ) [MethodDeclList1]
 ) [Program]
-INFO  17:34:07,995 - ===================================
-INFO  17:34:08,010 - Iskoriscena konstanta w [Fld  w: int, 0, 1] na liniji 27
-INFO  17:34:08,015 - Iskoriscena konstanta w [Fld  w: int, 0, 1] na liniji 28
-INFO  17:34:08,015 - Iskoriscen formalni parametar x [Var  x: int, 1, 1] na liniji 39
-INFO  17:34:08,015 - Iskoriscen formalni parametar x [Var  x: int, 1, 1] na liniji 39
-INFO  17:34:08,015 - Instanciran objekat [Var  : Class, -1, -1] na liniji 43
-INFO  17:34:08,015 - Iskoriscen formalni parametar x [Var  x: int, 0, 1] na liniji 55
-INFO  17:34:08,020 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 60
-INFO  17:34:08,020 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 63
-INFO  17:34:08,020 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 65
-INFO  17:34:08,020 - Iskoriscena konstanta globalna [Meth  globalna: int, 0, 0] na liniji 65
-INFO  17:34:08,020 - Poziv funkcije globalna na liniji 65
-INFO  17:34:08,020 - Iskoriscena promenljiva b [Var  b: Class, 3, 1] na liniji 66
-INFO  17:34:08,020 - Pristup polju [Meth  testic: notype, 0, 1] na liniji 66
-INFO  17:34:08,025 - Iskoriscena promenljiva b [Var  b: Class, 3, 1] na liniji 66
-INFO  17:34:08,025 - Iskoriscena promenljiva a [Var  a: Class, 4, 1] na liniji 67
-INFO  17:34:08,025 - Instanciran objekat [Var  : Class, -1, -1] na liniji 67
-INFO  17:34:08,025 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 68
-INFO  17:34:08,025 - Iskoriscena promenljiva flags [Var  flags: Arr of int, 1, 1] na liniji 68
-INFO  17:34:08,025 - Pristup elementu niza flags na liniji 68
-INFO  17:34:08,025 - Iskoriscena promenljiva a [Var  a: Class, 4, 1] na liniji 69
-INFO  17:34:08,025 - Iskoriscena konstanta null [Con  null: Class, 0, 0] na liniji 69
-INFO  17:34:08,025 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 70
-INFO  17:34:08,025 - Iskoriscena konstanta ord [Meth  ord: int, 0, 1] na liniji 70
-INFO  17:34:08,025 - Poziv funkcije ord na liniji 70
-INFO  17:34:08,025 - Iskoriscena promenljiva c [Var  c: Arr of char, 0, 1] na liniji 71
-INFO  17:34:08,030 - Pristup elementu niza c na liniji 71
-INFO  17:34:08,030 - Iskoriscena konstanta chr [Meth  chr: char, 0, 1] na liniji 71
-INFO  17:34:08,030 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 71
-INFO  17:34:08,030 - Poziv funkcije chr na liniji 71
-INFO  17:34:08,030 - Iskoriscena konstanta len [Meth  len: int, 0, 1] na liniji 72
-INFO  17:34:08,030 - Iskoriscena promenljiva c [Var  c: Arr of char, 0, 1] na liniji 72
-INFO  17:34:08,030 - Iskoriscena promenljiva c [Var  c: Arr of char, 0, 1] na liniji 74
-INFO  17:34:08,030 - Pristup elementu niza c na liniji 74
-INFO  17:34:08,030 - ===================================
-INFO  17:34:08,075 - Parsiranje uspesno zavrseno!
+INFO  17:20:48,038 - ===================================
+INFO  17:20:48,048 - Iskoriscena konstanta w [Fld  w: int, 0, 1] na liniji 27
+INFO  17:20:48,053 - Iskoriscena konstanta w [Fld  w: int, 0, 1] na liniji 28
+INFO  17:20:48,053 - Iskoriscen formalni parametar x [Var  x: int, 1, 1] na liniji 39
+INFO  17:20:48,053 - Iskoriscen formalni parametar x [Var  x: int, 1, 1] na liniji 39
+INFO  17:20:48,053 - Instanciran objekat [Var  : Class, -1, -1] na liniji 43
+INFO  17:20:48,053 - Iskoriscen formalni parametar x [Var  x: int, 0, 1] na liniji 55
+INFO  17:20:48,053 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 60
+INFO  17:20:48,053 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 63
+INFO  17:20:48,053 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 65
+INFO  17:20:48,053 - Iskoriscena konstanta globalna [Meth  globalna: int, 0, 0] na liniji 65
+INFO  17:20:48,053 - Poziv funkcije globalna na liniji 65
+INFO  17:20:48,053 - Iskoriscena promenljiva b [Var  b: Class, 3, 1] na liniji 66
+INFO  17:20:48,053 - Pristup polju [Meth  testic: notype, 0, 1] na liniji 66
+INFO  17:20:48,053 - Iskoriscena promenljiva b [Var  b: Class, 3, 1] na liniji 66
+INFO  17:20:48,053 - Iskoriscena promenljiva a [Var  a: Class, 4, 1] na liniji 67
+INFO  17:20:48,058 - Instanciran objekat [Var  : Class, -1, -1] na liniji 67
+INFO  17:20:48,058 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 68
+INFO  17:20:48,058 - Iskoriscena promenljiva flags [Var  flags: Arr of int, 1, 1] na liniji 68
+INFO  17:20:48,058 - Pristup elementu niza flags na liniji 68
+INFO  17:20:48,058 - Iskoriscena promenljiva a [Var  a: Class, 4, 1] na liniji 69
+INFO  17:20:48,058 - Iskoriscena konstanta null [Con  null: Class, 0, 0] na liniji 69
+INFO  17:20:48,058 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 70
+INFO  17:20:48,058 - Iskoriscena konstanta ord [Meth  ord: int, 0, 1] na liniji 70
+INFO  17:20:48,058 - Poziv funkcije ord na liniji 70
+INFO  17:20:48,058 - Iskoriscena promenljiva c [Var  c: Arr of char, 0, 1] na liniji 71
+INFO  17:20:48,058 - Pristup elementu niza c na liniji 71
+INFO  17:20:48,058 - Iskoriscena konstanta chr [Meth  chr: char, 0, 1] na liniji 71
+INFO  17:20:48,058 - Iskoriscena promenljiva f [Var  f: int, 2, 1] na liniji 71
+INFO  17:20:48,058 - Poziv funkcije chr na liniji 71
+INFO  17:20:48,058 - Iskoriscena konstanta len [Meth  len: int, 0, 1] na liniji 72
+INFO  17:20:48,058 - Iskoriscena promenljiva c [Var  c: Arr of char, 0, 1] na liniji 72
+INFO  17:20:48,058 - Iskoriscena promenljiva c [Var  c: Arr of char, 0, 1] na liniji 74
+INFO  17:20:48,058 - Pristup elementu niza c na liniji 74
+ERROR 17:20:48,058 - Parametar nije promenljiva tipa int, bool ili char na liniji 74
+INFO  17:20:48,058 - ===================================
+INFO  17:20:48,058 - Parsiranje nije uspesno!
