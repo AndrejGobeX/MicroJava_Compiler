@@ -53,6 +53,7 @@ public class MJParserTest {
 				if(file.exists())file.delete();
 				CodeGenerator cg = new CodeGenerator();
 				prog.traverseBottomUp(cg);
+				Code.dataSize = v.nVars;
 				Code.write(new FileOutputStream(file));
 				log.info("Parsiranje uspesno zavrseno!");
 			}

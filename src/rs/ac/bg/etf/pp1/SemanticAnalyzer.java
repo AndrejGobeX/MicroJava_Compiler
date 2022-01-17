@@ -158,6 +158,16 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		Obj mainMeth = Tab.find("main");
 		if(Tab.noObj == mainMeth || null == mainMeth || mainMeth.getKind() != Obj.Meth)
 			report_error("main funkcija nije pronadjena", null);
+		else {
+			if(mainMeth.getType().getKind() != Struct.None)
+				report_error("main funkcija nije void", null);
+			for (Obj obj : mainMeth.getLocalSymbols()) {
+				if (obj.getFpPos() != 0) {
+					report_error("main funkcija ima parametre", null);
+					break;
+				}
+			}
+		}
     	Tab.chainLocalSymbols(program.getProgName().obj);
     	Tab.closeScope();
     }
@@ -384,7 +394,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 	public void visit(SingleStatementRead singleStatement){
 		if(singleStatement.getDesignator().obj.getKind() != Obj.Var &&
-				singleStatement.getDesignator().obj.getKind() != Obj.Elem ||
+				singleStatement.getDesignator().obj.getKind() != Obj.Elem &&
+				singleStatement.getDesignator().obj.getKind() != Obj.Fld ||
 				(singleStatement.getDesignator().obj.getType().getKind() != Struct.Int
 				&& singleStatement.getDesignator().obj.getType().getKind() != Struct.Bool
 				&& singleStatement.getDesignator().obj.getType().getKind() != Struct.Char)){
@@ -393,7 +404,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	public void visit(SingleStatementPrint singleStatement){
-		if(singleStatement.getExpr().obj.getKind() != Obj.Var ||
+		if(singleStatement.getExpr().obj.getKind() != Obj.Var &&
+				singleStatement.getExpr().obj.getKind() != Obj.Con &&
+				singleStatement.getExpr().obj.getKind() != Obj.Elem &&
+				singleStatement.getExpr().obj.getKind() != Obj.Fld ||
 				(singleStatement.getExpr().obj.getType().getKind() != Struct.Int
 						&& singleStatement.getExpr().obj.getType().getKind() != Struct.Bool
 						&& singleStatement.getExpr().obj.getType().getKind() != Struct.Char)){
@@ -402,7 +416,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	public void visit(SingleStatementPrintNum singleStatement){
-		if(singleStatement.getExpr().obj.getKind() != Obj.Var ||
+		if(singleStatement.getExpr().obj.getKind() != Obj.Var &&
+				singleStatement.getExpr().obj.getKind() != Obj.Con &&
+				singleStatement.getExpr().obj.getKind() != Obj.Elem &&
+				singleStatement.getExpr().obj.getKind() != Obj.Fld ||
 				(singleStatement.getExpr().obj.getType().getKind() != Struct.Int
 						&& singleStatement.getExpr().obj.getType().getKind() != Struct.Bool
 						&& singleStatement.getExpr().obj.getType().getKind() != Struct.Char)){

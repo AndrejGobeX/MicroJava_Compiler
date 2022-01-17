@@ -1,86 +1,9 @@
 program Pera
-int x, y;
-const int a = 5, z = 79;
-const int u = 7;
-record R
 {
-	int x, t, t2, t3;
-}
-class A
-{
-	int x, y;
+	void main()
 	{
-		A(){}
-		int prin()
-		{
-		    return 15;
-		}
-	}
-}
-class B extends A
-{
-	int w;
-	{
-		B(){}
-		int prin()
-		{
-		    w = super();
-		    return w;
-		}
-		int haha(char x)
-		{
-			return 15;
-		}
-		int f()
-		{
-			return 15;
-		}
-		void testic(A a, int x){
-		    x = x;
-		}
-		A nessss()
-		{
-		    return new A;
-		}
-	}
-}
-	
-{
-    int globalna()
-    {
-        return 7;
-    }
-    int gl(int x)
-    {
-        return x;
-    }
-	void main() char c[]; int flags[], f; B b; A a;
-	{
-	    if(1<2){
-	        f = 1;
-	    }
-	    if(2>3 && true){
-	        f = 2;
-	    }
-        f = globalna();
-	    b.testic(b, 4);
-	    a = new A;
-	    f = flags[3];
-	    a = null;
-	    f = ord('c');
-	    c[1] = chr(f);
-	    len(c);
-
-	    read(c[1]);
-	    //a = (b.prin());
-	    //f = b.f();
-	    //f = 5;
-	    //f = false;
-	    //a = b;
-	    //f = a.x;
-	    //f = b.x;
-	    //a.x++;
-	    //b.prin();
+	    print(788);
+	    print('X');
 	}
 
 }

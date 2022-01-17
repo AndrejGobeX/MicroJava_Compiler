@@ -1,0 +1,56 @@
+INFO  18:49:16,787 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  18:49:17,310 - #2 program
+INFO  18:49:17,310 - #48 Pera
+INFO  18:49:17,310 - #43 {
+INFO  18:49:17,319 - #17 void
+INFO  18:49:17,319 - #48 main
+INFO  18:49:17,320 - #41 (
+INFO  18:49:17,326 - #42 )
+INFO  18:49:17,327 - #43 {
+INFO  18:49:17,331 - #14 print
+INFO  18:49:17,331 - #41 (
+INFO  18:49:17,335 - #47 88
+INFO  18:49:17,335 - #42 )
+INFO  18:49:17,337 - #37 ;
+INFO  18:49:17,337 - #44 }
+INFO  18:49:17,337 - #44 }
+INFO  18:49:17,370 - Program(
+  ProgName(
+   Pera
+  ) [ProgName]
+  DeclListE(
+  ) [DeclListE]
+  MethodDeclList1(
+    MethodDeclType(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      VarDeclListE(
+      ) [VarDeclListE]
+      StatementList1(
+        StatementListE(
+        ) [StatementListE]
+        StatementSingle(
+          SingleStatementPrint(
+            Expr1(
+              Terms1(
+                Term1(
+                  FactorNumConst(
+                   88
+                  ) [FactorNumConst]
+                ) [Term1]
+              ) [Terms1]
+            ) [Expr1]
+          ) [SingleStatementPrint]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclType]
+    MethodDeclListE(
+    ) [MethodDeclListE]
+  ) [MethodDeclList1]
+) [Program]
+INFO  18:49:17,370 - ===================================
+INFO  18:49:17,391 - ===================================
+INFO  18:49:17,420 - Parsiranje uspesno zavrseno!

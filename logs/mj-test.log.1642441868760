@@ -1,0 +1,22 @@
+INFO  18:51:00,335 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  18:51:00,892 - #2 program
+INFO  18:51:00,892 - #48 Pera
+INFO  18:51:00,892 - #43 {
+INFO  18:51:00,900 - #17 void
+INFO  18:51:00,902 - #48 main
+INFO  18:51:00,905 - #41 (
+INFO  18:51:00,910 - #42 )
+INFO  18:51:00,910 - #43 {
+INFO  18:51:00,912 - #14 print
+INFO  18:51:00,916 - #41 (
+INFO  18:51:00,916 - #47 788
+INFO  18:51:00,916 - #42 )
+INFO  18:51:00,920 - #37 ;
+INFO  18:51:00,920 - #14 print
+INFO  18:51:00,922 - #41 (
+INFO  18:51:00,922 - #49 X
+INFO  18:51:00,922 - #44 }
+ERROR 18:51:00,922 - 
+Sintaksna greska na liniji 7
+INFO  18:51:00,922 - #44 }
+ERROR 18:51:00,925 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9

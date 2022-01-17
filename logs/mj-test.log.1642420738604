@@ -1,0 +1,57 @@
+INFO  12:50:53,893 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  12:50:54,282 - #2 program
+INFO  12:50:54,282 - #48 Pera
+INFO  12:50:54,283 - #43 {
+INFO  12:50:54,289 - #17 void
+INFO  12:50:54,289 - #48 main
+INFO  12:50:54,292 - #41 (
+INFO  12:50:54,296 - #42 )
+INFO  12:50:54,296 - #43 {
+INFO  12:50:54,299 - #14 print
+INFO  12:50:54,302 - #41 (
+INFO  12:50:54,302 - #47 1
+INFO  12:50:54,303 - #42 )
+INFO  12:50:54,305 - #37 ;
+INFO  12:50:54,306 - #44 }
+INFO  12:50:54,307 - #44 }
+INFO  12:50:54,335 - Program(
+  ProgName(
+   Pera
+  ) [ProgName]
+  DeclListE(
+  ) [DeclListE]
+  MethodDeclList1(
+    MethodDeclType(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      VarDeclListE(
+      ) [VarDeclListE]
+      StatementList1(
+        StatementListE(
+        ) [StatementListE]
+        StatementSingle(
+          SingleStatementPrint(
+            Expr1(
+              Terms1(
+                Term1(
+                  FactorNumConst(
+                   1
+                  ) [FactorNumConst]
+                ) [Term1]
+              ) [Terms1]
+            ) [Expr1]
+          ) [SingleStatementPrint]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclType]
+    MethodDeclListE(
+    ) [MethodDeclListE]
+  ) [MethodDeclList1]
+) [Program]
+INFO  12:50:54,338 - ===================================
+ERROR 12:50:54,352 - Parametar nije promenljiva tipa int, bool ili char na liniji 5
+INFO  12:50:54,352 - ===================================
+INFO  12:50:54,356 - Parsiranje nije uspesno!
