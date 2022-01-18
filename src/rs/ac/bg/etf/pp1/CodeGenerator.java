@@ -147,4 +147,24 @@ public class CodeGenerator extends VisitorAdaptor {
     public void visit(FactorNew factor){
 
     }
+
+    /* Terms */
+
+    public void visit(Term2 term){
+        if(term.getMulop() instanceof MulopS)
+            Code.put(Code.mul);
+        else if(term.getMulop() instanceof MulopD)
+            Code.put(Code.div);
+        else
+            Code.put(Code.rem);
+    }
+
+    public void visit(Terms2 term){
+        if(term.getAddop() instanceof AddopP)
+            Code.put(Code.add);
+        else
+            Code.put(Code.sub);
+    }
+
+
 }
