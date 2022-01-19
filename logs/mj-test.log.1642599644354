@@ -1,0 +1,222 @@
+INFO  14:23:16,573 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  14:23:16,862 - #2 program
+INFO  14:23:16,862 - #48 Pera
+INFO  14:23:16,862 - #48 int
+INFO  14:23:16,866 - #48 x
+INFO  14:23:16,871 - #39 ,
+INFO  14:23:16,874 - #48 w
+INFO  14:23:16,874 - #45 [
+INFO  14:23:16,874 - #46 ]
+INFO  14:23:16,874 - #39 ,
+INFO  14:23:16,876 - #48 y
+INFO  14:23:16,876 - #37 ;
+INFO  14:23:16,876 - #48 char
+INFO  14:23:16,876 - #48 z
+INFO  14:23:16,876 - #39 ,
+INFO  14:23:16,876 - #48 arr
+INFO  14:23:16,876 - #45 [
+INFO  14:23:16,876 - #46 ]
+INFO  14:23:16,876 - #37 ;
+INFO  14:23:16,876 - #43 {
+INFO  14:23:16,876 - #17 void
+INFO  14:23:16,876 - #48 main
+INFO  14:23:16,881 - #41 (
+INFO  14:23:16,886 - #42 )
+INFO  14:23:16,886 - #43 {
+INFO  14:23:16,886 - #48 arr
+INFO  14:23:16,891 - #36 =
+INFO  14:23:16,896 - #13 new
+INFO  14:23:16,896 - #48 char
+INFO  14:23:16,896 - #45 [
+INFO  14:23:16,896 - #47 5
+INFO  14:23:16,896 - #46 ]
+INFO  14:23:16,896 - #37 ;
+INFO  14:23:16,901 - #15 read
+INFO  14:23:16,901 - #41 (
+INFO  14:23:16,901 - #48 arr
+INFO  14:23:16,901 - #45 [
+INFO  14:23:16,901 - #47 2
+INFO  14:23:16,901 - #46 ]
+INFO  14:23:16,901 - #42 )
+INFO  14:23:16,901 - #37 ;
+INFO  14:23:16,901 - #14 print
+INFO  14:23:16,901 - #41 (
+INFO  14:23:16,901 - #48 arr
+INFO  14:23:16,901 - #45 [
+INFO  14:23:16,906 - #47 2
+INFO  14:23:16,906 - #46 ]
+INFO  14:23:16,906 - #42 )
+INFO  14:23:16,906 - #37 ;
+INFO  14:23:16,906 - #44 }
+INFO  14:23:16,911 - #44 }
+INFO  14:23:16,937 - Program(
+  ProgName(
+   Pera
+  ) [ProgName]
+  DeclList1(
+    DeclList1(
+      DeclListE(
+      ) [DeclListE]
+      DeclVar(
+        VarDeclOK(
+          Type(
+           int
+          ) [Type]
+          VarAssNo(
+           x
+          ) [VarAssNo]
+          VarAssList1(
+            VarAssList1(
+              VarAssListE(
+              ) [VarAssListE]
+              VarAssBr(
+               w
+              ) [VarAssBr]
+            ) [VarAssList1]
+            VarAssNo(
+             y
+            ) [VarAssNo]
+          ) [VarAssList1]
+        ) [VarDeclOK]
+      ) [DeclVar]
+    ) [DeclList1]
+    DeclVar(
+      VarDeclOK(
+        Type(
+         char
+        ) [Type]
+        VarAssNo(
+         z
+        ) [VarAssNo]
+        VarAssList1(
+          VarAssListE(
+          ) [VarAssListE]
+          VarAssBr(
+           arr
+          ) [VarAssBr]
+        ) [VarAssList1]
+      ) [VarDeclOK]
+    ) [DeclVar]
+  ) [DeclList1]
+  MethodDeclList1(
+    MethodDeclType(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      VarDeclListE(
+      ) [VarDeclListE]
+      StatementList1(
+        StatementList1(
+          StatementList1(
+            StatementListE(
+            ) [StatementListE]
+            StatementSingle(
+              SingleStatementDesignator(
+                DesignatorStatementAssign(
+                  Designator(
+                    DesignatorIdentIdent(
+                     arr
+                    ) [DesignatorIdentIdent]
+                    DesignatorListE(
+                    ) [DesignatorListE]
+                  ) [Designator]
+                  ExprError1(
+                    Expr1(
+                      Terms1(
+                        Term1(
+                          FactorNewAr(
+                            Type(
+                             char
+                            ) [Type]
+                            Expr1(
+                              Terms1(
+                                Term1(
+                                  FactorNumConst(
+                                   5
+                                  ) [FactorNumConst]
+                                ) [Term1]
+                              ) [Terms1]
+                            ) [Expr1]
+                          ) [FactorNewAr]
+                        ) [Term1]
+                      ) [Terms1]
+                    ) [Expr1]
+                  ) [ExprError1]
+                ) [DesignatorStatementAssign]
+              ) [SingleStatementDesignator]
+            ) [StatementSingle]
+          ) [StatementList1]
+          StatementSingle(
+            SingleStatementRead(
+              Designator(
+                DesignatorIdentIdent(
+                 arr
+                ) [DesignatorIdentIdent]
+                DesignatorList1(
+                  DesignatorListE(
+                  ) [DesignatorListE]
+                  DesignatorEExpr(
+                    Expr1(
+                      Terms1(
+                        Term1(
+                          FactorNumConst(
+                           2
+                          ) [FactorNumConst]
+                        ) [Term1]
+                      ) [Terms1]
+                    ) [Expr1]
+                  ) [DesignatorEExpr]
+                ) [DesignatorList1]
+              ) [Designator]
+            ) [SingleStatementRead]
+          ) [StatementSingle]
+        ) [StatementList1]
+        StatementSingle(
+          SingleStatementPrint(
+            Expr1(
+              Terms1(
+                Term1(
+                  FactorDesignator(
+                    Designator(
+                      DesignatorIdentIdent(
+                       arr
+                      ) [DesignatorIdentIdent]
+                      DesignatorList1(
+                        DesignatorListE(
+                        ) [DesignatorListE]
+                        DesignatorEExpr(
+                          Expr1(
+                            Terms1(
+                              Term1(
+                                FactorNumConst(
+                                 2
+                                ) [FactorNumConst]
+                              ) [Term1]
+                            ) [Terms1]
+                          ) [Expr1]
+                        ) [DesignatorEExpr]
+                      ) [DesignatorList1]
+                    ) [Designator]
+                  ) [FactorDesignator]
+                ) [Term1]
+              ) [Terms1]
+            ) [Expr1]
+          ) [SingleStatementPrint]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclType]
+    MethodDeclListE(
+    ) [MethodDeclListE]
+  ) [MethodDeclList1]
+) [Program]
+INFO  14:23:16,937 - ===================================
+INFO  14:23:16,952 - Iskoriscena promenljiva arr [Var  arr: Arr of char, 4, 0] na liniji 7
+INFO  14:23:16,952 - Instanciran niz [Var  : Arr of char, -1, -1] na liniji 7
+INFO  14:23:16,952 - Iskoriscena promenljiva arr [Var  arr: Arr of char, 4, 0] na liniji 8
+INFO  14:23:16,952 - Pristup elementu niza arr na liniji 8
+INFO  14:23:16,952 - Iskoriscena promenljiva arr [Var  arr: Arr of char, 4, 0] na liniji 9
+INFO  14:23:16,952 - Pristup elementu niza arr na liniji 9
+INFO  14:23:16,952 - ===================================
+INFO  14:28:21,099 - Parsiranje uspesno zavrseno!

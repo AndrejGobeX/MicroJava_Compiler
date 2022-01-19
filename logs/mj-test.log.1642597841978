@@ -1,0 +1,153 @@
+INFO  14:07:21,897 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  14:07:22,273 - #2 program
+INFO  14:07:22,273 - #48 Pera
+INFO  14:07:22,273 - #48 int
+INFO  14:07:22,281 - #48 x
+INFO  14:07:22,283 - #39 ,
+INFO  14:07:22,292 - #48 w
+INFO  14:07:22,292 - #45 [
+INFO  14:07:22,292 - #46 ]
+INFO  14:07:22,294 - #39 ,
+INFO  14:07:22,294 - #48 y
+INFO  14:07:22,294 - #37 ;
+INFO  14:07:22,294 - #48 char
+INFO  14:07:22,294 - #48 z
+INFO  14:07:22,294 - #39 ,
+INFO  14:07:22,294 - #48 arr
+INFO  14:07:22,294 - #45 [
+INFO  14:07:22,294 - #46 ]
+INFO  14:07:22,294 - #37 ;
+INFO  14:07:22,294 - #43 {
+INFO  14:07:22,294 - #17 void
+INFO  14:07:22,294 - #48 main
+INFO  14:07:22,304 - #41 (
+INFO  14:07:22,304 - #42 )
+INFO  14:07:22,304 - #43 {
+INFO  14:07:22,304 - #48 z
+INFO  14:07:22,314 - #36 =
+INFO  14:07:22,314 - #49 c
+INFO  14:07:22,314 - #37 ;
+INFO  14:07:22,324 - #14 print
+INFO  14:07:22,324 - #41 (
+INFO  14:07:22,324 - #48 z
+INFO  14:07:22,324 - #42 )
+INFO  14:07:22,324 - #37 ;
+INFO  14:07:22,324 - #44 }
+INFO  14:07:22,324 - #44 }
+INFO  14:07:22,362 - Program(
+  ProgName(
+   Pera
+  ) [ProgName]
+  DeclList1(
+    DeclList1(
+      DeclListE(
+      ) [DeclListE]
+      DeclVar(
+        VarDeclOK(
+          Type(
+           int
+          ) [Type]
+          VarAssNo(
+           x
+          ) [VarAssNo]
+          VarAssList1(
+            VarAssList1(
+              VarAssListE(
+              ) [VarAssListE]
+              VarAssBr(
+               w
+              ) [VarAssBr]
+            ) [VarAssList1]
+            VarAssNo(
+             y
+            ) [VarAssNo]
+          ) [VarAssList1]
+        ) [VarDeclOK]
+      ) [DeclVar]
+    ) [DeclList1]
+    DeclVar(
+      VarDeclOK(
+        Type(
+         char
+        ) [Type]
+        VarAssNo(
+         z
+        ) [VarAssNo]
+        VarAssList1(
+          VarAssListE(
+          ) [VarAssListE]
+          VarAssBr(
+           arr
+          ) [VarAssBr]
+        ) [VarAssList1]
+      ) [VarDeclOK]
+    ) [DeclVar]
+  ) [DeclList1]
+  MethodDeclList1(
+    MethodDeclType(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      VarDeclListE(
+      ) [VarDeclListE]
+      StatementList1(
+        StatementList1(
+          StatementListE(
+          ) [StatementListE]
+          StatementSingle(
+            SingleStatementDesignator(
+              DesignatorStatementAssign(
+                Designator(
+                  DesignatorIdentIdent(
+                   z
+                  ) [DesignatorIdentIdent]
+                  DesignatorListE(
+                  ) [DesignatorListE]
+                ) [Designator]
+                ExprError1(
+                  Expr1(
+                    Terms1(
+                      Term1(
+                        FactorCharConst(
+                         c
+                        ) [FactorCharConst]
+                      ) [Term1]
+                    ) [Terms1]
+                  ) [Expr1]
+                ) [ExprError1]
+              ) [DesignatorStatementAssign]
+            ) [SingleStatementDesignator]
+          ) [StatementSingle]
+        ) [StatementList1]
+        StatementSingle(
+          SingleStatementPrint(
+            Expr1(
+              Terms1(
+                Term1(
+                  FactorDesignator(
+                    Designator(
+                      DesignatorIdentIdent(
+                       z
+                      ) [DesignatorIdentIdent]
+                      DesignatorListE(
+                      ) [DesignatorListE]
+                    ) [Designator]
+                  ) [FactorDesignator]
+                ) [Term1]
+              ) [Terms1]
+            ) [Expr1]
+          ) [SingleStatementPrint]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclType]
+    MethodDeclListE(
+    ) [MethodDeclListE]
+  ) [MethodDeclList1]
+) [Program]
+INFO  14:07:22,364 - ===================================
+INFO  14:08:22,765 - Iskoriscena promenljiva z [Var  z: char, 3, 0] na liniji 7
+INFO  14:09:29,583 - Iskoriscena promenljiva z [Var  z: char, 3, 0] na liniji 8
+INFO  14:10:30,373 - ===================================
+INFO  14:10:30,383 - Parsiranje uspesno zavrseno!

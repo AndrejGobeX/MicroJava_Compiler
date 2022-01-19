@@ -1,0 +1,108 @@
+INFO  13:55:37,605 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  13:55:37,934 - #2 program
+INFO  13:55:37,935 - #48 Pera
+INFO  13:55:37,935 - #48 int
+INFO  13:55:37,940 - #48 x
+INFO  13:55:37,945 - #39 ,
+INFO  13:55:37,949 - #48 y
+INFO  13:55:37,949 - #37 ;
+INFO  13:55:37,950 - #48 char
+INFO  13:55:37,952 - #48 z
+INFO  13:55:37,952 - #37 ;
+INFO  13:55:37,953 - #43 {
+INFO  13:55:37,953 - #17 void
+INFO  13:55:37,953 - #48 main
+INFO  13:55:37,956 - #41 (
+INFO  13:55:37,959 - #42 )
+INFO  13:55:37,959 - #43 {
+INFO  13:55:37,962 - #48 x
+INFO  13:55:37,965 - #36 =
+INFO  13:55:37,971 - #47 79
+INFO  13:55:37,971 - #37 ;
+INFO  13:55:37,974 - #44 }
+INFO  13:55:37,977 - #44 }
+INFO  13:55:38,007 - Program(
+  ProgName(
+   Pera
+  ) [ProgName]
+  DeclList1(
+    DeclList1(
+      DeclListE(
+      ) [DeclListE]
+      DeclVar(
+        VarDeclOK(
+          Type(
+           int
+          ) [Type]
+          VarAssNo(
+           x
+          ) [VarAssNo]
+          VarAssList1(
+            VarAssListE(
+            ) [VarAssListE]
+            VarAssNo(
+             y
+            ) [VarAssNo]
+          ) [VarAssList1]
+        ) [VarDeclOK]
+      ) [DeclVar]
+    ) [DeclList1]
+    DeclVar(
+      VarDeclOK(
+        Type(
+         char
+        ) [Type]
+        VarAssNo(
+         z
+        ) [VarAssNo]
+        VarAssListE(
+        ) [VarAssListE]
+      ) [VarDeclOK]
+    ) [DeclVar]
+  ) [DeclList1]
+  MethodDeclList1(
+    MethodDeclType(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      VarDeclListE(
+      ) [VarDeclListE]
+      StatementList1(
+        StatementListE(
+        ) [StatementListE]
+        StatementSingle(
+          SingleStatementDesignator(
+            DesignatorStatementAssign(
+              Designator(
+                DesignatorIdentIdent(
+                 x
+                ) [DesignatorIdentIdent]
+                DesignatorListE(
+                ) [DesignatorListE]
+              ) [Designator]
+              ExprError1(
+                Expr1(
+                  Terms1(
+                    Term1(
+                      FactorNumConst(
+                       79
+                      ) [FactorNumConst]
+                    ) [Term1]
+                  ) [Terms1]
+                ) [Expr1]
+              ) [ExprError1]
+            ) [DesignatorStatementAssign]
+          ) [SingleStatementDesignator]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclType]
+    MethodDeclListE(
+    ) [MethodDeclListE]
+  ) [MethodDeclList1]
+) [Program]
+INFO  13:55:38,008 - ===================================
+INFO  13:55:38,023 - Iskoriscena promenljiva x [Var  x: int, 0, 0] na liniji 9
+INFO  13:55:38,024 - ===================================
+INFO  13:55:52,712 - Parsiranje uspesno zavrseno!

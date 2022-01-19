@@ -1,12 +1,20 @@
 program Pera
-int x, y;
+int x, w[], y;
+char z, arr[];
 {
 	void main()
 	{
 	    x = 79;
-	    y = 1;
-	    x = x + y * 2;
-	    print(x);
+	    arr = new char[5];
+	    read(arr[2]);
+	    print(arr[2]);
+	    w = new int[5];
+	    read(w[2]);
+	    y = w[2];
+	    print(w[2]);
+	    x = (x + y) * 2;
+	    x--;
+	    print(x, 2);
 	    print('X', 2);
 	}
 

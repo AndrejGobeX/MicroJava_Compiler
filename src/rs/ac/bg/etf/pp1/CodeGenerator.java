@@ -7,9 +7,11 @@ import rs.etf.pp1.mj.runtime.Code;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Stack;
 
 public class CodeGenerator extends VisitorAdaptor {
     Map<String, Integer> methodAdresses = new HashMap<>();
+    public Stack<Obj> currentDesignatorObj = new Stack<Obj>();
 
     private void methChr() {
         methodAdresses.put("chr", Code.pc);
@@ -43,9 +45,9 @@ public class CodeGenerator extends VisitorAdaptor {
     }
 
     public void visit(ProgName progName){
-        methOrd();
-        methLen();
-        methChr();
+        //methOrd();
+        //methLen();
+        //methChr();
     }
 
     public void visit(Program program){
@@ -55,14 +57,14 @@ public class CodeGenerator extends VisitorAdaptor {
     /* SignleStatements */
 
     public void visit(SingleStatementRead singleStatement){
-        Struct designatorType = singleStatement.getDesignator().obj.getType();
+        Struct designatorType = currentDesignatorObj.peek().getType();
         if (designatorType.getKind() == Struct.Int) {
             Code.put(Code.read);
         }
         else if (designatorType.getKind() == Struct.Char) {
             Code.put(Code.bread);
         }
-        Code.store(singleStatement.getDesignator().obj);
+        Code.store(currentDesignatorObj.pop());
     }
 
     public void visit(SingleStatementPrint singleStatement){
@@ -85,25 +87,80 @@ public class CodeGenerator extends VisitorAdaptor {
     /* Designator */
 
     public void visit(DesignatorIdentIdent designatorIdent){
-        if(!(designatorIdent.getParent() instanceof DesignatorStatementAssign)){
-            Code.load(designatorIdent.obj);
-        }
+        currentDesignatorObj.push(designatorIdent.obj);
     }
 
     public void visit(DesignatorIdentSuper designatorIdent){
-        if(!(designatorIdent.getParent() instanceof DesignatorStatementAssign)){
-            Code.load(designatorIdent.obj);
-        }
+        currentDesignatorObj.push(designatorIdent.obj);
     }
 
     public void visit(DesignatorIdentThis designatorIdent){
-        if(!(designatorIdent.getParent() instanceof DesignatorStatementAssign)){
-            Code.load(designatorIdent.obj);
-        }
+        currentDesignatorObj.push(designatorIdent.obj);
     }
+
+    public void visit(DesignatorEExpr designatorEExpr){
+        Code.load(currentDesignatorObj.pop());
+        Code.put(Code.dup_x1);
+        Code.put(Code.pop);
+        currentDesignatorObj.push(designatorEExpr.obj);
+    }
+
+    public void visit(DesignatorEIdent designatorEIdent){
+        Code.load(currentDesignatorObj.pop());
+        currentDesignatorObj.push(designatorEIdent.obj);
+    }
+
+    //public void visit
 
     public void visit(DesignatorStatementAssign designatorStatement){
         Code.store(designatorStatement.getDesignator().obj);
+        currentDesignatorObj.pop();
+    }
+
+    public void visit(DesignatorStatementInc d){
+        if(currentDesignatorObj.peek().getKind() == Obj.Elem){
+            Code.put(Code.dup2);
+            if(currentDesignatorObj.peek().getType().getKind() == Struct.Char)
+                Code.put(Code.baload);
+            else
+                Code.put(Code.aload);
+            currentDesignatorObj.pop();
+        }
+        else if(currentDesignatorObj.peek().getKind() == Obj.Fld){
+            Code.put(Code.dup);
+            Code.load(d.getDesignator().obj);
+            currentDesignatorObj.pop();
+        }
+        else if(currentDesignatorObj.peek().getKind() == Obj.Var){
+            Code.load(currentDesignatorObj.pop());
+        }
+
+        Code.loadConst(1);
+        Code.put(Code.add);
+        Code.store(d.getDesignator().obj);
+    }
+
+    public void visit(DesignatorStatementDec d){
+        if(currentDesignatorObj.peek().getKind() == Obj.Elem){
+            Code.put(Code.dup2);
+            if(currentDesignatorObj.peek().getType().getKind() == Struct.Char)
+                Code.put(Code.baload);
+            else
+                Code.put(Code.aload);
+            currentDesignatorObj.pop();
+        }
+        else if(currentDesignatorObj.peek().getKind() == Obj.Fld){
+            Code.put(Code.dup);
+            Code.load(d.getDesignator().obj);
+            currentDesignatorObj.pop();
+        }
+        else if(currentDesignatorObj.peek().getKind() == Obj.Var){
+            Code.load(currentDesignatorObj.pop());
+        }
+
+        Code.loadConst(1);
+        Code.put(Code.sub);
+        Code.store(d.getDesignator().obj);
     }
 
     /* Method */
@@ -144,8 +201,20 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.loadConst(factor.getB1());
     }
 
+    public void visit(FactorDesignator factor){
+        Code.load(currentDesignatorObj.pop());
+    }
+
     public void visit(FactorNew factor){
 
+    }
+
+    public void visit(FactorNewAr factor){
+        Code.put(Code.newarray);
+        if(factor.getType().struct.getKind() == Struct.Char)
+            Code.put(0);
+        else
+            Code.put(1);
     }
 
     /* Terms */
@@ -164,6 +233,10 @@ public class CodeGenerator extends VisitorAdaptor {
             Code.put(Code.add);
         else
             Code.put(Code.sub);
+    }
+
+    public void visit(Expr2 expr){
+        Code.put(Code.neg);
     }
 
 

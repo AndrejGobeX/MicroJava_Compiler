@@ -72,13 +72,12 @@ nonterminal SingleStatement SingleStatement;
 nonterminal Statements Statements;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal ActPars ActPars;
-nonterminal DesignatorList DesignatorList;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, ClassName, RecordName, MethodName;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, ExtendsHelper, MethodType;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorIdent, DesignatorElem, Designator, Expr, ExprError, Terms, Term, Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorIdent, DesignatorElem, DesignatorList, Designator, Expr, ExprError, Terms, Term, Factor;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ConditionHelper, Condition, CondFact, CondTerm, Relop, VarAss;
 
 precedence left ELSE;

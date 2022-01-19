@@ -1,0 +1,12 @@
+program Pera
+int x, w[], y;
+char z, arr[];
+{
+	void main()
+	{
+	    arr = new char[5];
+	    read(arr[2]);
+	    print(arr[2]);
+	}
+
+}

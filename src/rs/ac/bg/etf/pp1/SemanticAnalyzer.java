@@ -6,10 +6,7 @@ import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.symboltable.*;
 import rs.etf.pp1.symboltable.concepts.*;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class SemanticAnalyzer extends VisitorAdaptor {
 
@@ -18,12 +15,12 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	boolean relopEq = false;
 	Struct currentType = null;
 	Struct currentMethodType = null;
-	Obj currentDesignatorObj = null;
 	Obj currentClassObj = null;
 	Obj currentMethodObj = null;
 	public int nVars;
 	int formParCnt = 1;
 	Queue<Obj> paramsQueue = null;
+	Stack<Obj> currentDesignatorObj = new Stack<>();
 	
 	Logger log = Logger.getLogger(getClass());
 
@@ -508,7 +505,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 				report_info("Iskoriscen formalni parametar "+designatorIdent.getDesignatorName()+" "+objToStr(typeNode), designatorIdent);
 		}
 		designatorIdent.obj = typeNode;
-		currentDesignatorObj = designatorIdent.obj;
+		currentDesignatorObj.push(designatorIdent.obj);
 	}
 
 	public void visit(DesignatorIdentSuper designatorIdent){
@@ -519,7 +516,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 				report_error("Ova klasa nije izvedena ni iz jedne druge klase", designatorIdent);
 		else
 			report_error("Super van klase", designatorIdent);
-		currentDesignatorObj = designatorIdent.obj;
+		currentDesignatorObj.push(designatorIdent.obj);
 	}
 
 	public void visit(DesignatorIdentThis designatorIdent){
@@ -527,43 +524,50 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			designatorIdent.obj = currentClassObj;
 		else
 			report_error("This van klase", designatorIdent);
-		currentDesignatorObj = designatorIdent.obj;
+		currentDesignatorObj.push(designatorIdent.obj);
 	}
 
 	public void visit(DesignatorEIdent designatorElem){
-		if(currentDesignatorObj == null)
+		if(currentDesignatorObj.size() == 0)
 			return;
-		if(currentDesignatorObj.getType().getKind() != Struct.Class){
+		if(currentDesignatorObj.peek().getType().getKind() != Struct.Class){
 			report_error("Nije moguce pristupiti polju objekta koji nije klasa ili record", designatorElem);
 		}
-		Struct currentClassType = currentDesignatorObj.getType();
+		Struct currentClassType = currentDesignatorObj.peek().getType();
 		Obj field = null;
 		while(currentClassType != null) {
 			field = currentClassType.getMembersTable().searchKey(designatorElem.getIdentName());
 			if (field != null && field != Tab.noObj) {
-				currentDesignatorObj = field;
-				report_info("Pristup polju "+objToStr(currentDesignatorObj), designatorElem);
+				currentDesignatorObj.pop();
+				currentDesignatorObj.push(field);
+				report_info("Pristup polju "+objToStr(currentDesignatorObj.peek()), designatorElem);
 				return;
 			}
 			currentClassType = currentClassType.getElemType();
 		}
 		report_error("Nepoznato polje " + designatorElem.getIdentName(), designatorElem);
-		currentDesignatorObj = null;
+		currentDesignatorObj.clear();
 	}
 
 	public void visit(DesignatorEExpr designatorElem){
-		if(currentDesignatorObj == null)
+		if(currentDesignatorObj.size() == 0)
 			return;
-		if(currentDesignatorObj.getType().getKind() != Struct.Array){
+		if(currentDesignatorObj.peek().getType().getKind() != Struct.Array){
 			report_error("Nije moguce indeksirati objekat koji nije niz", designatorElem);
 		}
-        report_info("Pristup elementu niza "+currentDesignatorObj.getName(), designatorElem);
-		currentDesignatorObj = new Obj(Obj.Elem, "elem", currentDesignatorObj.getType().getElemType());
+        report_info("Pristup elementu niza "+currentDesignatorObj.peek().getName(), designatorElem);
+		Obj o = currentDesignatorObj.pop();
+		currentDesignatorObj.push(new Obj(Obj.Elem, "elem", o.getType().getElemType()));
+        designatorElem.obj = currentDesignatorObj.peek();
+	}
+
+	public void visit(DesignatorList1 designatorList){
+		designatorList.obj = designatorList.getDesignatorElem().obj;
 	}
 
 	public void visit(Designator designator){
-		designator.obj = currentDesignatorObj;
-		currentDesignatorObj = null;
+		designator.obj = currentDesignatorObj.peek();
+		currentDesignatorObj.pop();
 	}
 
 	/* Expr */

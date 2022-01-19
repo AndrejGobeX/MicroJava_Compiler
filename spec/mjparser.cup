@@ -56,12 +56,12 @@ terminal Integer BOOLCONST;
 nonterminal DeclList, Decl, ConstDecl, ConstAssList, ConstAss, VarDecl, VarAssList;
 nonterminal VarDeclList, ClassDecl, RecordDecl, MethodDecl, MethodDeclList;
 nonterminal FormPars, Statement, StatementList, SingleStatement, Statements, DesignatorStatement;
-nonterminal ActPars, DesignatorList;
+nonterminal ActPars;
 nonterminal Addop, Mulop;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, ClassName, RecordName, MethodName;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, ExtendsHelper, MethodType;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorIdent, DesignatorElem, Designator, Expr, ExprError, Terms, Term, Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorIdent, DesignatorElem, DesignatorList, Designator, Expr, ExprError, Terms, Term, Factor;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ConditionHelper, Condition, CondFact, CondTerm, Relop, VarAss;
 
 precedence left ELSE;
