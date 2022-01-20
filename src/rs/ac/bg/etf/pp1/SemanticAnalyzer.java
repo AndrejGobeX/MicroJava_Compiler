@@ -139,6 +139,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
     public void visit(ProgName progName){
+		Tab.insert(Obj.Type, "bool", new Struct(Struct.Bool));
 		progName.obj = Tab.insert(Obj.Prog, progName.getProgramName(), Tab.noType);
     	Tab.openScope();
     }
@@ -175,6 +176,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
     	}
     	//report_info("Deklarisana konstanta "+ constAss.getConstName(), constAss);
 		Obj varNode = Tab.insert(Obj.Con, constAss.getConstName(), currentType);
+		varNode.setAdr(constAss.getN1());
     }
     
     public void visit(ConstAssBool constAss) {
@@ -190,6 +192,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
     	}
     	//report_info("Deklarisana konstanta "+ constAss.getConstName(), constAss);
 		Obj varNode = Tab.insert(Obj.Con, constAss.getConstName(), currentType);
+		varNode.setAdr(constAss.getB1());
     }
     
     public void visit(ConstAssChar constAss) {
@@ -205,6 +208,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
     	}
     	//report_info("Deklarisana konstanta "+ constAss.getConstName(), constAss);
 		Obj varNode = Tab.insert(Obj.Con, constAss.getConstName(), currentType);
+		varNode.setAdr(constAss.getC1());
     }
     
     public void visit(Type type){

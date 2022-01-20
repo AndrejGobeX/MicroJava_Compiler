@@ -119,7 +119,13 @@ public class CodeGenerator extends VisitorAdaptor {
     }
 
     public void visit(DesignatorEExpr designatorEExpr){
-        Code.load(currentDesignatorObj.pop());
+        if(currentDesignatorObj.peek().getKind() == Obj.Fld){
+            Code.put(Code.dup_x1);
+            Code.put(Code.pop);
+            Code.load(currentDesignatorObj.pop());
+        }
+        else
+            Code.load(currentDesignatorObj.pop());
         Code.put(Code.dup_x1);
         Code.put(Code.pop);
         currentDesignatorObj.push(designatorEExpr.obj);

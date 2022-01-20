@@ -1,0 +1,194 @@
+INFO  17:37:22,043 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  17:37:22,506 - #2 program
+INFO  17:37:22,506 - #48 MJProgram
+INFO  17:37:22,506 - #48 int
+INFO  17:37:22,512 - #48 x
+INFO  17:37:22,512 - #45 [
+INFO  17:37:22,512 - #46 ]
+INFO  17:37:22,512 - #37 ;
+INFO  17:37:22,512 - #43 {
+INFO  17:37:22,512 - #17 void
+INFO  17:37:22,512 - #48 main
+INFO  17:37:22,512 - #41 (
+INFO  17:37:22,512 - #42 )
+INFO  17:37:22,512 - #43 {
+INFO  17:37:22,528 - #48 x
+INFO  17:37:22,528 - #36 =
+INFO  17:37:22,528 - #13 new
+INFO  17:37:22,528 - #48 int
+INFO  17:37:22,528 - #45 [
+INFO  17:37:22,528 - #47 1
+INFO  17:37:22,528 - #46 ]
+INFO  17:37:22,528 - #37 ;
+INFO  17:37:22,528 - #48 x
+INFO  17:37:22,528 - #45 [
+INFO  17:37:22,528 - #47 0
+INFO  17:37:22,528 - #46 ]
+INFO  17:37:22,544 - #36 =
+INFO  17:37:22,544 - #47 5
+INFO  17:37:22,544 - #37 ;
+INFO  17:37:22,544 - #14 print
+INFO  17:37:22,544 - #41 (
+INFO  17:37:22,544 - #48 x
+INFO  17:37:22,544 - #45 [
+INFO  17:37:22,544 - #47 0
+INFO  17:37:22,544 - #46 ]
+INFO  17:37:22,544 - #42 )
+INFO  17:37:22,544 - #37 ;
+INFO  17:37:22,544 - #44 }
+INFO  17:37:22,544 - #44 }
+INFO  17:37:22,559 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  DeclList1(
+    DeclListE(
+    ) [DeclListE]
+    DeclVar(
+      VarDeclOK(
+        Type(
+         int
+        ) [Type]
+        VarAssBr(
+         x
+        ) [VarAssBr]
+        VarAssListE(
+        ) [VarAssListE]
+      ) [VarDeclOK]
+    ) [DeclVar]
+  ) [DeclList1]
+  MethodDeclList1(
+    MethodDeclType(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      VarDeclListE(
+      ) [VarDeclListE]
+      StatementList1(
+        StatementList1(
+          StatementList1(
+            StatementListE(
+            ) [StatementListE]
+            StatementSingle(
+              SingleStatementDesignator(
+                DesignatorStatementAssign(
+                  Designator(
+                    DesignatorIdentIdent(
+                     x
+                    ) [DesignatorIdentIdent]
+                    DesignatorListE(
+                    ) [DesignatorListE]
+                  ) [Designator]
+                  ExprError1(
+                    Expr1(
+                      Terms1(
+                        Term1(
+                          FactorNewAr(
+                            Type(
+                             int
+                            ) [Type]
+                            Expr1(
+                              Terms1(
+                                Term1(
+                                  FactorNumConst(
+                                   1
+                                  ) [FactorNumConst]
+                                ) [Term1]
+                              ) [Terms1]
+                            ) [Expr1]
+                          ) [FactorNewAr]
+                        ) [Term1]
+                      ) [Terms1]
+                    ) [Expr1]
+                  ) [ExprError1]
+                ) [DesignatorStatementAssign]
+              ) [SingleStatementDesignator]
+            ) [StatementSingle]
+          ) [StatementList1]
+          StatementSingle(
+            SingleStatementDesignator(
+              DesignatorStatementAssign(
+                Designator(
+                  DesignatorIdentIdent(
+                   x
+                  ) [DesignatorIdentIdent]
+                  DesignatorList1(
+                    DesignatorListE(
+                    ) [DesignatorListE]
+                    DesignatorEExpr(
+                      Expr1(
+                        Terms1(
+                          Term1(
+                            FactorNumConst(
+                             0
+                            ) [FactorNumConst]
+                          ) [Term1]
+                        ) [Terms1]
+                      ) [Expr1]
+                    ) [DesignatorEExpr]
+                  ) [DesignatorList1]
+                ) [Designator]
+                ExprError1(
+                  Expr1(
+                    Terms1(
+                      Term1(
+                        FactorNumConst(
+                         5
+                        ) [FactorNumConst]
+                      ) [Term1]
+                    ) [Terms1]
+                  ) [Expr1]
+                ) [ExprError1]
+              ) [DesignatorStatementAssign]
+            ) [SingleStatementDesignator]
+          ) [StatementSingle]
+        ) [StatementList1]
+        StatementSingle(
+          SingleStatementPrint(
+            Expr1(
+              Terms1(
+                Term1(
+                  FactorDesignator(
+                    Designator(
+                      DesignatorIdentIdent(
+                       x
+                      ) [DesignatorIdentIdent]
+                      DesignatorList1(
+                        DesignatorListE(
+                        ) [DesignatorListE]
+                        DesignatorEExpr(
+                          Expr1(
+                            Terms1(
+                              Term1(
+                                FactorNumConst(
+                                 0
+                                ) [FactorNumConst]
+                              ) [Term1]
+                            ) [Terms1]
+                          ) [Expr1]
+                        ) [DesignatorEExpr]
+                      ) [DesignatorList1]
+                    ) [Designator]
+                  ) [FactorDesignator]
+                ) [Term1]
+              ) [Terms1]
+            ) [Expr1]
+          ) [SingleStatementPrint]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclType]
+    MethodDeclListE(
+    ) [MethodDeclListE]
+  ) [MethodDeclList1]
+) [Program]
+INFO  17:37:22,559 - ===================================
+INFO  17:37:22,575 - Iskoriscen formalni parametar x [Var  x: Arr of int, 0, 0] na liniji 6
+INFO  17:37:22,575 - Instanciran niz [Var  : Arr of int, -1, -1] na liniji 6
+INFO  17:37:22,575 - Iskoriscen formalni parametar x [Var  x: Arr of int, 0, 0] na liniji 7
+INFO  17:37:22,575 - Pristup elementu niza x na liniji 7
+INFO  17:37:22,575 - Iskoriscen formalni parametar x [Var  x: Arr of int, 0, 0] na liniji 8
+INFO  17:37:22,575 - Pristup elementu niza x na liniji 8
+INFO  17:37:22,575 - ===================================
+INFO  17:37:22,590 - Parsiranje uspesno zavrseno!
