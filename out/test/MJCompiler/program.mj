@@ -1,21 +1,62 @@
 program Pera
 int x, w[], y;
 char z, arr[];
+record R
 {
-	void main()
+    int r0, r1;
+    char r2, r3;
+}
+{
+    int add(int a, int b)int t;
+    {
+        t = a+b;
+        return t;
+    }
+    char test(R r1, int w1[])int t;
+    {
+        r1.r1 = w1[2];
+        return chr(r1.r1);
+    }
+	void main()R r[];
 	{
-	    x = 79;
-	    arr = new char[5];
-	    read(arr[2]);
-	    print(arr[2]);
-	    w = new int[5];
-	    read(w[2]);
-	    y = w[2];
-	    print(w[2]);
-	    x = (x + y) * 2;
-	    x--;
-	    print(x, 2);
-	    print('X', 2);
+	    read(x);
+	    do{
+	        y = x;
+	        do{
+	            print(x);
+	            x--;
+	            break;
+	            x--;
+	        }while(x>0);
+	        x = y-1;
+	    }while(x>0);
+
+	    //r = new R[5];
+	    //r[1] = new R;
+	    //r[1].r1 = 5;
+	    //print(r[1].r1);
+
+	    //        x = 79;
+        //        arr = new char[5];
+        //        read(arr[2]);
+        //        print(arr[2]);
+        //        w = new int[5];
+        //        read(w[2]);
+        //        y = w[2];
+        //        print(w[2]);
+        //        x = (x + y) * 2;
+        //        x--;
+        //        w[2]++;
+        //        print(w[2]);
+        //        print(x, 2);
+        //        print('X', 2);
+
+        //w = new int[5];
+        //r = new R;
+        //w[2] = 5;
+        //z = test(r, w);
+        //print(r.r1);
+        //print(ord(z));
 	}
 
 }

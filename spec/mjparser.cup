@@ -56,8 +56,8 @@ terminal Integer BOOLCONST;
 nonterminal DeclList, Decl, ConstDecl, ConstAssList, ConstAss, VarDecl, VarAssList;
 nonterminal VarDeclList, ClassDecl, RecordDecl, MethodDecl, MethodDeclList;
 nonterminal FormPars, Statement, StatementList, SingleStatement, Statements, DesignatorStatement;
-nonterminal ActPars;
-nonterminal Addop, Mulop;
+nonterminal ActPars, IfEnd, CBegin, CEnd;
+nonterminal Addop, Mulop, OrBreak, DoWhile, While;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, ClassName, RecordName, MethodName;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, ExtendsHelper, MethodType;
@@ -187,11 +187,11 @@ StatementList ::= (StatementList1) StatementList Statement
 				
 SingleStatement ::= (SingleStatementDesignator) DesignatorStatement SEMI
 				|
-				(SingleStatementIfElse) IF LPAREN ConditionHelper RPAREN Statement ELSE Statement
+				(SingleStatementIfElse) IF LPAREN CBegin ConditionHelper CEnd RPAREN Statement IfEnd ELSE Statement
 				|
-				(SingleStatementIf) IF LPAREN ConditionHelper RPAREN Statement
+				(SingleStatementIf) IF LPAREN CBegin ConditionHelper CEnd RPAREN Statement IfEnd
 				|
-				(SingleStatementDoWhile) DO Statement WHILE LPAREN Condition RPAREN SEMI
+				(SingleStatementDoWhile) DoWhile Statement While LPAREN CBegin Condition CEnd RPAREN SEMI
 				|
 				(SingleStatementBreak) BREAK SEMI
 				|
@@ -207,6 +207,18 @@ SingleStatement ::= (SingleStatementDesignator) DesignatorStatement SEMI
 				|
 				(SingleStatementPrintNum) PRINT LPAREN Expr COMMA NUMCONST RPAREN SEMI
 				;
+
+IfEnd ::= (IfEnd) /* epsilon */;
+
+DoWhile ::= (DoWhile) DO;
+
+While ::= (While) WHILE;
+
+CBegin ::= (CBegin) /* epsilon */;
+
+CEnd ::= (CEnd) /* epsilon */;
+
+OrBreak ::= (OrBreak) /* epsilon */;
 
 Statements ::= (Statements) LBRACE StatementList RBRACE;
 
@@ -233,7 +245,7 @@ ConditionHelper ::= (ConditionOK) Condition
 		
 Condition ::= (Condition1) CondTerm
 			|
-			(Condition2) Condition OR CondTerm
+			(Condition2) Condition OR OrBreak CondTerm
 			;
 
 CondTerm ::= (CondTerm1) CondFact

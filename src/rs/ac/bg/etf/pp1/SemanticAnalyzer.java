@@ -123,6 +123,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		//report_info("Deklarisana promenljiva "+ varAss.getVarName()+ "[]", varAss);
 		boolean fld = (currentClassObj != null && currentMethodObj == null);
 		varAss.obj = Tab.insert(fld?Obj.Fld:Obj.Var, varAss.getVarName(), new Struct(Struct.Array, currentType));
+		if(currentMethodObj != null)varAss.obj.setFpPos(-1);
 	}
 	
 	public void visit(VarAssNo varAss) {
@@ -134,18 +135,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		//report_info("Deklarisana promenljiva "+ varAss.getVarName(), varAss);
 		boolean fld = (currentClassObj != null && currentMethodObj == null);
 		varAss.obj = Tab.insert(fld?Obj.Fld:Obj.Var, varAss.getVarName(), currentType);
+		if(currentMethodObj != null)varAss.obj.setFpPos(-1);
 	}
 	
     public void visit(ProgName progName){
-    	Obj def = Tab.find("chr");
-		Iterator<Obj> iterator = def.getLocalSymbols().iterator();
-		iterator.next().setFpPos(1);
-		def = Tab.find("ord");
-		iterator = def.getLocalSymbols().iterator();
-		iterator.next().setFpPos(1);
-		def = Tab.find("len");
-		iterator = def.getLocalSymbols().iterator();
-		iterator.next().setFpPos(1);
 		progName.obj = Tab.insert(Obj.Prog, progName.getProgramName(), Tab.noType);
     	Tab.openScope();
     }
@@ -159,7 +152,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			if(mainMeth.getType().getKind() != Struct.None)
 				report_error("main funkcija nije void", null);
 			for (Obj obj : mainMeth.getLocalSymbols()) {
-				if (obj.getFpPos() != 0) {
+				if (obj.getFpPos() != -1) {
 					report_error("main funkcija ima parametre", null);
 					break;
 				}
@@ -323,7 +316,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
     public void visit(MethodName methodName) {
     	methodName.obj = Tab.insert(Obj.Meth, methodName.getMethodName(), currentMethodType);
     	Tab.openScope();
-		formParCnt = 1;
+		formParCnt = 0;
 		currentMethodObj = methodName.obj;
     }
     
@@ -452,6 +445,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		if(designatorStatement.getDesignator().obj.getKind() != Obj.Meth){
 			report_error("Izraz ne predstavlja funkciju", designatorStatement);
 		}
+		Iterator<Obj> iterator = designatorStatement.getDesignator().obj.getLocalSymbols().iterator();
+		if(iterator.hasNext() && iterator.next().getFpPos()==0){
+			report_error("Broj parametara ne odgovara pozvanoj funkciji", designatorStatement);
+		}
 	}
 
 	public void visit(DesignatorStatementActPars designatorStatement){
@@ -464,7 +461,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Broj parametara ne odgovara pozvanoj funkciji", designatorStatement);
 			return;
 		}
-		int cnt = 1;
+		int cnt = 0;
 		while (!paramsQueue.isEmpty()){
 			Obj currentPar = iterator.next();
 			Obj currentArg = paramsQueue.poll();
@@ -499,7 +496,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			if(Obj.Var != typeNode.getKind() && Obj.Con != typeNode.getKind() && Obj.Fld != typeNode.getKind() && Obj.Fld != typeNode.getKind() && Obj.Meth != typeNode.getKind()){
 				report_error("Greska: Ime " + designatorIdent.getDesignatorName() + " ne predstavlja promenljivu!", designatorIdent);
 			}
-			else if(typeNode.getFpPos() == 0)
+			else if(typeNode.getFpPos() == -1)
 				report_info("Iskoriscena "+(Obj.Var == typeNode.getKind() ? "promenljiva " : "konstanta ")+designatorIdent.getDesignatorName()+" "+objToStr(typeNode), designatorIdent);
 			else
 				report_info("Iskoriscen formalni parametar "+designatorIdent.getDesignatorName()+" "+objToStr(typeNode), designatorIdent);
@@ -541,6 +538,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 				currentDesignatorObj.pop();
 				currentDesignatorObj.push(field);
 				report_info("Pristup polju "+objToStr(currentDesignatorObj.peek()), designatorElem);
+				designatorElem.obj = field;
 				return;
 			}
 			currentClassType = currentClassType.getElemType();
@@ -588,9 +586,6 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	public void visit(CondFactE condFact){
-		if(condFact.getExpr().obj.getType().getKind() != Struct.Bool){
-			report_error("Uslov nije tipa bool", condFact);
-		}
 		condFact.obj = new Obj(Obj.Var, "", new Struct(Struct.Bool));
 	}
 
@@ -666,6 +661,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			factor.obj = new Obj(Obj.Var, "nekiint", Tab.noType);
 			return;
 		}
+		Iterator<Obj> iterator = factor.getDesignator().obj.getLocalSymbols().iterator();
+		if(iterator.hasNext() && iterator.next().getFpPos()==0){
+			report_error("Broj parametara ne odgovara pozvanoj funkciji", factor);
+		}
 		report_info("Poziv funkcije "+factor.getDesignator().getDesignatorIdent().obj.getName(), factor);
 		factor.obj = new Obj(Obj.Var, "nekioutput", factor.getDesignator().obj.getType());
 	}
@@ -691,7 +690,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Broj parametara ne odgovara pozvanoj funkciji", factor);
 			return;
 		}
-		int cnt = 1;
+		int cnt = 0;
 		while (!paramsQueue.isEmpty()){
 			Obj currentPar = iterator.next();
 			Obj currentArg = paramsQueue.poll();

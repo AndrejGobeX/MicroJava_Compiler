@@ -1,17 +1,22 @@
 package rs.ac.bg.etf.pp1;
 
 import rs.ac.bg.etf.pp1.ast.*;
+import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.*;
 import rs.etf.pp1.mj.runtime.Code;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 
 public class CodeGenerator extends VisitorAdaptor {
     Map<String, Integer> methodAdresses = new HashMap<>();
+    Stack<List<Integer>> trueskips = new Stack<>();
+    Stack<List<Integer>> falseskips = new Stack<>();
+    Stack<Integer> loops = new Stack<>();
+    Stack<List<Integer>> continueStack = new Stack<>();
+    Stack<List<Integer>> breakStack = new Stack<>();
     public Stack<Obj> currentDesignatorObj = new Stack<Obj>();
+
+    /* Util */
 
     private void methChr() {
         methodAdresses.put("chr", Code.pc);
@@ -44,10 +49,25 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.put(Code.return_);
     }
 
+    private void call(String name) {
+        int pc = Code.pc;
+        Code.put(Code.call);
+        Code.put2(methodAdresses.get(name) - pc);
+    }
+
+    private void backpatch(Stack<List<Integer>> stack){
+        List<Integer> ll = stack.peek();
+        for(Integer i:ll){
+            Code.fixup(i);
+        }
+    }
+
+    /* Prog */
+
     public void visit(ProgName progName){
-        //methOrd();
-        //methLen();
-        //methChr();
+        methOrd();
+        methLen();
+        methChr();
     }
 
     public void visit(Program program){
@@ -110,7 +130,6 @@ public class CodeGenerator extends VisitorAdaptor {
         currentDesignatorObj.push(designatorEIdent.obj);
     }
 
-    //public void visit
 
     public void visit(DesignatorStatementAssign designatorStatement){
         Code.store(designatorStatement.getDesignator().obj);
@@ -138,6 +157,24 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.loadConst(1);
         Code.put(Code.add);
         Code.store(d.getDesignator().obj);
+    }
+
+    public void visit(DesignatorStatementNo d){
+        if(d.getDesignator().getDesignatorList() instanceof DesignatorListE){
+            call(currentDesignatorObj.peek().getName());
+            if(currentDesignatorObj.pop().getType() != Tab.noType){
+                Code.put(Code.pop);
+            }
+        }
+    }
+
+    public void visit(DesignatorStatementActPars d){
+        if(d.getDesignator().getDesignatorList() instanceof DesignatorListE){
+            call(currentDesignatorObj.peek().getName());
+            if(currentDesignatorObj.pop().getType() != Tab.noType){
+                Code.put(Code.pop);
+            }
+        }
     }
 
     public void visit(DesignatorStatementDec d){
@@ -170,7 +207,7 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.put(Code.enter);
         int ls=0, ps=0;
         for (Obj obj : methodName.obj.getLocalSymbols()) {
-            if(obj.getFpPos()==0)++ls;
+            if(obj.getFpPos()==-1)++ls;
             else ps++;
         }
         Code.put(ps);
@@ -205,8 +242,21 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.load(currentDesignatorObj.pop());
     }
 
-    public void visit(FactorNew factor){
+    public void visit(FactorDesignatorNo factor){
+        if(factor.getDesignator().getDesignatorList() instanceof DesignatorListE){
+            call(currentDesignatorObj.pop().getName());
+        }
+    }
 
+    public void visit(FactorDesignatorActPars factor){
+        if(factor.getDesignator().getDesignatorList() instanceof DesignatorListE){
+            call(currentDesignatorObj.pop().getName());
+        }
+    }
+
+    public void visit(FactorNew factor){
+        Code.put(Code.new_);
+        Code.put2(factor.obj.getType().getNumberOfFields());
     }
 
     public void visit(FactorNewAr factor){
@@ -239,5 +289,92 @@ public class CodeGenerator extends VisitorAdaptor {
         Code.put(Code.neg);
     }
 
+    /* Conditions */
+
+    public void visit(SingleStatementContinue singleStatementContinue){
+        continueStack.peek().add(1 + Code.pc);
+        Code.putJump(0);
+    }
+
+    public void visit(SingleStatementBreak singleStatementContinue){
+        breakStack.peek().add(1 + Code.pc);
+        Code.putJump(0);
+    }
+
+    public void visit(SingleStatementDoWhile singleStatementDoWhile){
+        Code.putJump(loops.pop());
+        backpatch(breakStack);
+        backpatch(falseskips);
+        breakStack.pop();
+        falseskips.pop();
+    }
+
+    public void visit(DoWhile doWhile){
+        breakStack.push(new LinkedList<>());
+        continueStack.push(new LinkedList<>());
+        loops.push(Code.pc);
+    }
+
+    public void visit(While w){
+        backpatch(continueStack);
+        continueStack.pop();
+    }
+
+    public void visit(SingleStatementIfElse single){
+        backpatch(trueskips);
+        trueskips.pop();
+    }
+
+    public void visit(IfEnd ifEnd){
+        if(ifEnd.getParent() instanceof SingleStatementIfElse){
+            trueskips.push(new LinkedList<>());
+            trueskips.peek().add(1 + Code.pc);
+            Code.putJump(0);
+        }
+        backpatch(falseskips);
+        falseskips.pop();
+    }
+
+    public void visit(OrBreak orBreak){
+        trueskips.peek().add(1 + Code.pc);
+        Code.putJump(0);
+        backpatch(falseskips);
+        falseskips.peek().clear();
+    }
+
+    public void visit(CondFactR condFact){
+        int r;
+        if(condFact.getRelop() instanceof RelopNeq)
+            r = Code.ne;
+        else if(condFact.getRelop() instanceof RelopEq)
+            r = Code.eq;
+        else if(condFact.getRelop() instanceof RelopGE)
+            r = Code.ge;
+        else if(condFact.getRelop() instanceof RelopGT)
+            r = Code.gt;
+        else if(condFact.getRelop() instanceof RelopLE)
+            r = Code.le;
+        else
+            r = Code.lt;
+
+        falseskips.peek().add(1 + Code.pc);
+        Code.putFalseJump(r, 0);
+    }
+
+    public void visit(CondFactE condFact){
+        Code.loadConst(0);
+        falseskips.peek().add(1 + Code.pc);
+        Code.putFalseJump(Code.ne, 0);
+    }
+
+    public void visit(CBegin cbegin){
+        trueskips.push(new LinkedList<>());
+        falseskips.push(new LinkedList<>());
+    }
+
+    public void visit(CEnd cend){
+        backpatch(trueskips);
+        trueskips.pop();
+    }
 
 }

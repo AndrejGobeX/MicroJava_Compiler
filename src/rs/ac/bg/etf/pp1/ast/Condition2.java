@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/0/2022 11:25:4
+// 20/0/2022 16:24:7
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,11 +8,14 @@ package rs.ac.bg.etf.pp1.ast;
 public class Condition2 extends Condition {
 
     private Condition Condition;
+    private OrBreak OrBreak;
     private CondTerm CondTerm;
 
-    public Condition2 (Condition Condition, CondTerm CondTerm) {
+    public Condition2 (Condition Condition, OrBreak OrBreak, CondTerm CondTerm) {
         this.Condition=Condition;
         if(Condition!=null) Condition.setParent(this);
+        this.OrBreak=OrBreak;
+        if(OrBreak!=null) OrBreak.setParent(this);
         this.CondTerm=CondTerm;
         if(CondTerm!=null) CondTerm.setParent(this);
     }
@@ -23,6 +26,14 @@ public class Condition2 extends Condition {
 
     public void setCondition(Condition Condition) {
         this.Condition=Condition;
+    }
+
+    public OrBreak getOrBreak() {
+        return OrBreak;
+    }
+
+    public void setOrBreak(OrBreak OrBreak) {
+        this.OrBreak=OrBreak;
     }
 
     public CondTerm getCondTerm() {
@@ -39,17 +50,20 @@ public class Condition2 extends Condition {
 
     public void childrenAccept(Visitor visitor) {
         if(Condition!=null) Condition.accept(visitor);
+        if(OrBreak!=null) OrBreak.accept(visitor);
         if(CondTerm!=null) CondTerm.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Condition!=null) Condition.traverseTopDown(visitor);
+        if(OrBreak!=null) OrBreak.traverseTopDown(visitor);
         if(CondTerm!=null) CondTerm.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Condition!=null) Condition.traverseBottomUp(visitor);
+        if(OrBreak!=null) OrBreak.traverseBottomUp(visitor);
         if(CondTerm!=null) CondTerm.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -61,6 +75,12 @@ public class Condition2 extends Condition {
 
         if(Condition!=null)
             buffer.append(Condition.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(OrBreak!=null)
+            buffer.append(OrBreak.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

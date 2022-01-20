@@ -1,0 +1,218 @@
+INFO  10:28:11,825 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  10:28:12,298 - #2 program
+INFO  10:28:12,298 - #48 Pera
+INFO  10:28:12,298 - #48 int
+INFO  10:28:12,306 - #48 x
+INFO  10:28:12,308 - #39 ,
+INFO  10:28:12,308 - #48 w
+INFO  10:28:12,308 - #45 [
+INFO  10:28:12,308 - #46 ]
+INFO  10:28:12,308 - #39 ,
+INFO  10:28:12,308 - #48 y
+INFO  10:28:12,308 - #37 ;
+INFO  10:28:12,308 - #48 char
+INFO  10:28:12,316 - #48 z
+INFO  10:28:12,316 - #39 ,
+INFO  10:28:12,316 - #48 arr
+INFO  10:28:12,316 - #45 [
+INFO  10:28:12,316 - #46 ]
+INFO  10:28:12,316 - #37 ;
+INFO  10:28:12,316 - #43 {
+INFO  10:28:12,316 - #17 void
+INFO  10:28:12,316 - #48 nes
+INFO  10:28:12,316 - #41 (
+INFO  10:28:12,324 - #48 int
+INFO  10:28:12,324 - #48 x
+INFO  10:28:12,324 - #42 )
+INFO  10:28:12,324 - #48 int
+INFO  10:28:12,324 - #48 y
+INFO  10:28:12,324 - #39 ,
+INFO  10:28:12,324 - #48 z
+INFO  10:28:12,324 - #39 ,
+INFO  10:28:12,324 - #48 w
+INFO  10:28:12,324 - #37 ;
+INFO  10:28:12,324 - #43 {
+INFO  10:28:12,332 - #48 x
+INFO  10:28:12,332 - #21 ++
+INFO  10:28:12,341 - #37 ;
+INFO  10:28:12,341 - #44 }
+INFO  10:28:12,341 - #17 void
+INFO  10:28:12,341 - #48 main
+INFO  10:28:12,341 - #41 (
+INFO  10:28:12,341 - #42 )
+INFO  10:28:12,341 - #43 {
+INFO  10:28:12,341 - #48 nes
+INFO  10:28:12,341 - #41 (
+INFO  10:28:12,341 - #47 1
+INFO  10:28:12,341 - #39 ,
+INFO  10:28:12,349 - #47 2
+INFO  10:28:12,349 - #42 )
+INFO  10:28:12,349 - #37 ;
+INFO  10:28:12,349 - #44 }
+INFO  10:28:12,349 - #44 }
+INFO  10:28:12,366 - Program(
+  ProgName(
+   Pera
+  ) [ProgName]
+  DeclList1(
+    DeclList1(
+      DeclListE(
+      ) [DeclListE]
+      DeclVar(
+        VarDeclOK(
+          Type(
+           int
+          ) [Type]
+          VarAssNo(
+           x
+          ) [VarAssNo]
+          VarAssList1(
+            VarAssList1(
+              VarAssListE(
+              ) [VarAssListE]
+              VarAssBr(
+               w
+              ) [VarAssBr]
+            ) [VarAssList1]
+            VarAssNo(
+             y
+            ) [VarAssNo]
+          ) [VarAssList1]
+        ) [VarDeclOK]
+      ) [DeclVar]
+    ) [DeclList1]
+    DeclVar(
+      VarDeclOK(
+        Type(
+         char
+        ) [Type]
+        VarAssNo(
+         z
+        ) [VarAssNo]
+        VarAssList1(
+          VarAssListE(
+          ) [VarAssListE]
+          VarAssBr(
+           arr
+          ) [VarAssBr]
+        ) [VarAssList1]
+      ) [VarDeclOK]
+    ) [DeclVar]
+  ) [DeclList1]
+  MethodDeclList1(
+    MethodDeclTypeFormPars(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       nes
+      ) [MethodName]
+      FormPars1(
+        Type(
+         int
+        ) [Type]
+        VarAssNo(
+         x
+        ) [VarAssNo]
+      ) [FormPars1]
+      VarDeclList1(
+        VarDeclOK(
+          Type(
+           int
+          ) [Type]
+          VarAssNo(
+           y
+          ) [VarAssNo]
+          VarAssList1(
+            VarAssList1(
+              VarAssListE(
+              ) [VarAssListE]
+              VarAssNo(
+               z
+              ) [VarAssNo]
+            ) [VarAssList1]
+            VarAssNo(
+             w
+            ) [VarAssNo]
+          ) [VarAssList1]
+        ) [VarDeclOK]
+        VarDeclListE(
+        ) [VarDeclListE]
+      ) [VarDeclList1]
+      StatementList1(
+        StatementListE(
+        ) [StatementListE]
+        StatementSingle(
+          SingleStatementDesignator(
+            DesignatorStatementInc(
+              Designator(
+                DesignatorIdentIdent(
+                 x
+                ) [DesignatorIdentIdent]
+                DesignatorListE(
+                ) [DesignatorListE]
+              ) [Designator]
+            ) [DesignatorStatementInc]
+          ) [SingleStatementDesignator]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclTypeFormPars]
+    MethodDeclList1(
+      MethodDeclType(
+        MethodTypeVoid(
+        ) [MethodTypeVoid]
+        MethodName(
+         main
+        ) [MethodName]
+        VarDeclListE(
+        ) [VarDeclListE]
+        StatementList1(
+          StatementListE(
+          ) [StatementListE]
+          StatementSingle(
+            SingleStatementDesignator(
+              DesignatorStatementActPars(
+                Designator(
+                  DesignatorIdentIdent(
+                   nes
+                  ) [DesignatorIdentIdent]
+                  DesignatorListE(
+                  ) [DesignatorListE]
+                ) [Designator]
+                ActPars2(
+                  ActPars1(
+                    Expr1(
+                      Terms1(
+                        Term1(
+                          FactorNumConst(
+                           1
+                          ) [FactorNumConst]
+                        ) [Term1]
+                      ) [Terms1]
+                    ) [Expr1]
+                  ) [ActPars1]
+                  Expr1(
+                    Terms1(
+                      Term1(
+                        FactorNumConst(
+                         2
+                        ) [FactorNumConst]
+                      ) [Term1]
+                    ) [Terms1]
+                  ) [Expr1]
+                ) [ActPars2]
+              ) [DesignatorStatementActPars]
+            ) [SingleStatementDesignator]
+          ) [StatementSingle]
+        ) [StatementList1]
+      ) [MethodDeclType]
+      MethodDeclListE(
+      ) [MethodDeclListE]
+    ) [MethodDeclList1]
+  ) [MethodDeclList1]
+) [Program]
+INFO  10:28:12,366 - ===================================
+INFO  10:28:12,382 - Iskoriscen formalni parametar x [Var  x: int, 0, 1] na liniji 7
+INFO  10:28:12,382 - Iskoriscen formalni parametar nes [Meth  nes: notype, 0, 0] na liniji 26
+ERROR 10:28:12,382 - Broj parametara ne odgovara pozvanoj funkciji na liniji 26
+INFO  10:28:12,382 - ===================================
+INFO  10:28:12,382 - Parsiranje nije uspesno!

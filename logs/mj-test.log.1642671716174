@@ -1,0 +1,332 @@
+INFO  10:38:54,833 - Compiling source file: C:\Users\HP\Desktop\ETF\PP\MJCompiler\test\program.mj
+INFO  10:38:55,123 - #2 program
+INFO  10:38:55,123 - #48 Pera
+INFO  10:38:55,123 - #48 int
+INFO  10:38:55,131 - #48 x
+INFO  10:38:55,131 - #39 ,
+INFO  10:38:55,131 - #48 w
+INFO  10:38:55,131 - #45 [
+INFO  10:38:55,131 - #46 ]
+INFO  10:38:55,131 - #39 ,
+INFO  10:38:55,131 - #48 y
+INFO  10:38:55,131 - #37 ;
+INFO  10:38:55,131 - #48 char
+INFO  10:38:55,131 - #48 z
+INFO  10:38:55,139 - #39 ,
+INFO  10:38:55,139 - #48 arr
+INFO  10:38:55,139 - #45 [
+INFO  10:38:55,139 - #46 ]
+INFO  10:38:55,139 - #37 ;
+INFO  10:38:55,139 - #43 {
+INFO  10:38:55,139 - #17 void
+INFO  10:38:55,139 - #48 nes
+INFO  10:38:55,139 - #41 (
+INFO  10:38:55,139 - #48 int
+INFO  10:38:55,139 - #48 x
+INFO  10:38:55,139 - #42 )
+INFO  10:38:55,139 - #48 int
+INFO  10:38:55,139 - #48 y
+INFO  10:38:55,147 - #39 ,
+INFO  10:38:55,147 - #48 z
+INFO  10:38:55,147 - #39 ,
+INFO  10:38:55,147 - #48 w
+INFO  10:38:55,147 - #37 ;
+INFO  10:38:55,147 - #43 {
+INFO  10:38:55,147 - #48 x
+INFO  10:38:55,147 - #21 ++
+INFO  10:38:55,156 - #37 ;
+INFO  10:38:55,156 - #44 }
+INFO  10:38:55,156 - #48 int
+INFO  10:38:55,156 - #48 fff
+INFO  10:38:55,156 - #41 (
+INFO  10:38:55,156 - #48 int
+INFO  10:38:55,156 - #48 x
+INFO  10:38:55,156 - #39 ,
+INFO  10:38:55,156 - #48 char
+INFO  10:38:55,156 - #48 y
+INFO  10:38:55,156 - #42 )
+INFO  10:38:55,156 - #48 char
+INFO  10:38:55,156 - #48 z
+INFO  10:38:55,156 - #37 ;
+INFO  10:38:55,156 - #43 {
+INFO  10:38:55,156 - #16 return
+INFO  10:38:55,156 - #48 x
+INFO  10:38:55,156 - #37 ;
+INFO  10:38:55,156 - #44 }
+INFO  10:38:55,164 - #17 void
+INFO  10:38:55,164 - #48 main
+INFO  10:38:55,164 - #41 (
+INFO  10:38:55,164 - #42 )
+INFO  10:38:55,164 - #43 {
+INFO  10:38:55,164 - #48 nes
+INFO  10:38:55,164 - #41 (
+INFO  10:38:55,164 - #47 1
+INFO  10:38:55,164 - #42 )
+INFO  10:38:55,164 - #37 ;
+INFO  10:38:55,164 - #48 fff
+INFO  10:38:55,164 - #41 (
+INFO  10:38:55,164 - #47 1
+INFO  10:38:55,164 - #39 ,
+INFO  10:38:55,164 - #49 c
+INFO  10:38:55,164 - #42 )
+INFO  10:38:55,164 - #37 ;
+INFO  10:38:55,164 - #44 }
+INFO  10:38:55,164 - #44 }
+INFO  10:38:55,190 - Program(
+  ProgName(
+   Pera
+  ) [ProgName]
+  DeclList1(
+    DeclList1(
+      DeclListE(
+      ) [DeclListE]
+      DeclVar(
+        VarDeclOK(
+          Type(
+           int
+          ) [Type]
+          VarAssNo(
+           x
+          ) [VarAssNo]
+          VarAssList1(
+            VarAssList1(
+              VarAssListE(
+              ) [VarAssListE]
+              VarAssBr(
+               w
+              ) [VarAssBr]
+            ) [VarAssList1]
+            VarAssNo(
+             y
+            ) [VarAssNo]
+          ) [VarAssList1]
+        ) [VarDeclOK]
+      ) [DeclVar]
+    ) [DeclList1]
+    DeclVar(
+      VarDeclOK(
+        Type(
+         char
+        ) [Type]
+        VarAssNo(
+         z
+        ) [VarAssNo]
+        VarAssList1(
+          VarAssListE(
+          ) [VarAssListE]
+          VarAssBr(
+           arr
+          ) [VarAssBr]
+        ) [VarAssList1]
+      ) [VarDeclOK]
+    ) [DeclVar]
+  ) [DeclList1]
+  MethodDeclList1(
+    MethodDeclTypeFormPars(
+      MethodTypeVoid(
+      ) [MethodTypeVoid]
+      MethodName(
+       nes
+      ) [MethodName]
+      FormPars1(
+        Type(
+         int
+        ) [Type]
+        VarAssNo(
+         x
+        ) [VarAssNo]
+      ) [FormPars1]
+      VarDeclList1(
+        VarDeclOK(
+          Type(
+           int
+          ) [Type]
+          VarAssNo(
+           y
+          ) [VarAssNo]
+          VarAssList1(
+            VarAssList1(
+              VarAssListE(
+              ) [VarAssListE]
+              VarAssNo(
+               z
+              ) [VarAssNo]
+            ) [VarAssList1]
+            VarAssNo(
+             w
+            ) [VarAssNo]
+          ) [VarAssList1]
+        ) [VarDeclOK]
+        VarDeclListE(
+        ) [VarDeclListE]
+      ) [VarDeclList1]
+      StatementList1(
+        StatementListE(
+        ) [StatementListE]
+        StatementSingle(
+          SingleStatementDesignator(
+            DesignatorStatementInc(
+              Designator(
+                DesignatorIdentIdent(
+                 x
+                ) [DesignatorIdentIdent]
+                DesignatorListE(
+                ) [DesignatorListE]
+              ) [Designator]
+            ) [DesignatorStatementInc]
+          ) [SingleStatementDesignator]
+        ) [StatementSingle]
+      ) [StatementList1]
+    ) [MethodDeclTypeFormPars]
+    MethodDeclList1(
+      MethodDeclTypeFormPars(
+        MethodType1(
+          Type(
+           int
+          ) [Type]
+        ) [MethodType1]
+        MethodName(
+         fff
+        ) [MethodName]
+        FormPars2(
+          FormPars1(
+            Type(
+             int
+            ) [Type]
+            VarAssNo(
+             x
+            ) [VarAssNo]
+          ) [FormPars1]
+          Type(
+           char
+          ) [Type]
+          VarAssNo(
+           y
+          ) [VarAssNo]
+        ) [FormPars2]
+        VarDeclList1(
+          VarDeclOK(
+            Type(
+             char
+            ) [Type]
+            VarAssNo(
+             z
+            ) [VarAssNo]
+            VarAssListE(
+            ) [VarAssListE]
+          ) [VarDeclOK]
+          VarDeclListE(
+          ) [VarDeclListE]
+        ) [VarDeclList1]
+        StatementList1(
+          StatementListE(
+          ) [StatementListE]
+          StatementSingle(
+            SingleStatementReturnExpr(
+              Expr1(
+                Terms1(
+                  Term1(
+                    FactorDesignator(
+                      Designator(
+                        DesignatorIdentIdent(
+                         x
+                        ) [DesignatorIdentIdent]
+                        DesignatorListE(
+                        ) [DesignatorListE]
+                      ) [Designator]
+                    ) [FactorDesignator]
+                  ) [Term1]
+                ) [Terms1]
+              ) [Expr1]
+            ) [SingleStatementReturnExpr]
+          ) [StatementSingle]
+        ) [StatementList1]
+      ) [MethodDeclTypeFormPars]
+      MethodDeclList1(
+        MethodDeclType(
+          MethodTypeVoid(
+          ) [MethodTypeVoid]
+          MethodName(
+           main
+          ) [MethodName]
+          VarDeclListE(
+          ) [VarDeclListE]
+          StatementList1(
+            StatementList1(
+              StatementListE(
+              ) [StatementListE]
+              StatementSingle(
+                SingleStatementDesignator(
+                  DesignatorStatementActPars(
+                    Designator(
+                      DesignatorIdentIdent(
+                       nes
+                      ) [DesignatorIdentIdent]
+                      DesignatorListE(
+                      ) [DesignatorListE]
+                    ) [Designator]
+                    ActPars1(
+                      Expr1(
+                        Terms1(
+                          Term1(
+                            FactorNumConst(
+                             1
+                            ) [FactorNumConst]
+                          ) [Term1]
+                        ) [Terms1]
+                      ) [Expr1]
+                    ) [ActPars1]
+                  ) [DesignatorStatementActPars]
+                ) [SingleStatementDesignator]
+              ) [StatementSingle]
+            ) [StatementList1]
+            StatementSingle(
+              SingleStatementDesignator(
+                DesignatorStatementActPars(
+                  Designator(
+                    DesignatorIdentIdent(
+                     fff
+                    ) [DesignatorIdentIdent]
+                    DesignatorListE(
+                    ) [DesignatorListE]
+                  ) [Designator]
+                  ActPars2(
+                    ActPars1(
+                      Expr1(
+                        Terms1(
+                          Term1(
+                            FactorNumConst(
+                             1
+                            ) [FactorNumConst]
+                          ) [Term1]
+                        ) [Terms1]
+                      ) [Expr1]
+                    ) [ActPars1]
+                    Expr1(
+                      Terms1(
+                        Term1(
+                          FactorCharConst(
+                           c
+                          ) [FactorCharConst]
+                        ) [Term1]
+                      ) [Terms1]
+                    ) [Expr1]
+                  ) [ActPars2]
+                ) [DesignatorStatementActPars]
+              ) [SingleStatementDesignator]
+            ) [StatementSingle]
+          ) [StatementList1]
+        ) [MethodDeclType]
+        MethodDeclListE(
+        ) [MethodDeclListE]
+      ) [MethodDeclList1]
+    ) [MethodDeclList1]
+  ) [MethodDeclList1]
+) [Program]
+INFO  10:38:55,190 - ===================================
+INFO  10:38:55,198 - Iskoriscen formalni parametar x [Var  x: int, 0, 1] na liniji 7
+INFO  10:38:55,198 - Iskoriscen formalni parametar x [Var  x: int, 0, 1] na liniji 11
+INFO  10:38:55,198 - Iskoriscen formalni parametar nes [Meth  nes: notype, 0, 0] na liniji 30
+INFO  10:38:55,198 - Iskoriscen formalni parametar fff [Meth  fff: int, 0, 0] na liniji 31
+INFO  10:38:55,206 - ===================================
+INFO  10:38:55,214 - Parsiranje uspesno zavrseno!

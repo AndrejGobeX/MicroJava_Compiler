@@ -72,8 +72,14 @@ nonterminal SingleStatement SingleStatement;
 nonterminal Statements Statements;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal ActPars ActPars;
+nonterminal IfEnd IfEnd;
+nonterminal CBegin CBegin;
+nonterminal CEnd CEnd;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
+nonterminal OrBreak OrBreak;
+nonterminal DoWhile DoWhile;
+nonterminal While While;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, ClassName, RecordName, MethodName;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, ExtendsHelper, MethodType;
@@ -203,11 +209,11 @@ StatementList ::= (StatementList1) StatementList:S1 Statement:S2 {: RESULT=new S
 				
 SingleStatement ::= (SingleStatementDesignator) DesignatorStatement:D1 SEMI {: RESULT=new SingleStatementDesignator(D1); RESULT.setLine(D1left); :}
 				|
-				(SingleStatementIfElse) IF LPAREN ConditionHelper:C1 RPAREN Statement:S2 ELSE Statement:S3 {: RESULT=new SingleStatementIfElse(C1, S2, S3); RESULT.setLine(C1left); :}
+				(SingleStatementIfElse) IF LPAREN CBegin:C1 ConditionHelper:C2 CEnd:C3 RPAREN Statement:S4 IfEnd:I5 ELSE Statement:S6 {: RESULT=new SingleStatementIfElse(C1, C2, C3, S4, I5, S6); RESULT.setLine(C1left); :}
 				|
-				(SingleStatementIf) IF LPAREN ConditionHelper:C1 RPAREN Statement:S2 {: RESULT=new SingleStatementIf(C1, S2); RESULT.setLine(C1left); :}
+				(SingleStatementIf) IF LPAREN CBegin:C1 ConditionHelper:C2 CEnd:C3 RPAREN Statement:S4 IfEnd:I5 {: RESULT=new SingleStatementIf(C1, C2, C3, S4, I5); RESULT.setLine(C1left); :}
 				|
-				(SingleStatementDoWhile) DO Statement:S1 WHILE LPAREN Condition:C2 RPAREN SEMI {: RESULT=new SingleStatementDoWhile(S1, C2); RESULT.setLine(S1left); :}
+				(SingleStatementDoWhile) DoWhile:D1 Statement:S2 While:W3 LPAREN CBegin:C4 Condition:C5 CEnd:C6 RPAREN SEMI {: RESULT=new SingleStatementDoWhile(D1, S2, W3, C4, C5, C6); RESULT.setLine(D1left); :}
 				|
 				(SingleStatementBreak) BREAK SEMI {: RESULT=new SingleStatementBreak(); :}
 				|
@@ -223,6 +229,18 @@ SingleStatement ::= (SingleStatementDesignator) DesignatorStatement:D1 SEMI {: R
 				|
 				(SingleStatementPrintNum) PRINT LPAREN Expr:E1 COMMA NUMCONST:N2 RPAREN SEMI {: RESULT=new SingleStatementPrintNum(E1, N2); RESULT.setLine(E1left); :}
 				;
+
+IfEnd ::= (IfEnd) {: RESULT=new IfEnd(); :} /* epsilon */;
+
+DoWhile ::= (DoWhile) DO {: RESULT=new DoWhile(); :};
+
+While ::= (While) WHILE {: RESULT=new While(); :};
+
+CBegin ::= (CBegin) {: RESULT=new CBegin(); :} /* epsilon */;
+
+CEnd ::= (CEnd) {: RESULT=new CEnd(); :} /* epsilon */;
+
+OrBreak ::= (OrBreak) {: RESULT=new OrBreak(); :} /* epsilon */;
 
 Statements ::= (Statements) LBRACE StatementList:S1 RBRACE {: RESULT=new Statements(S1); RESULT.setLine(S1left); :};
 
@@ -249,7 +267,7 @@ ConditionHelper ::= (ConditionOK) Condition:C1 {: RESULT=new ConditionOK(C1); RE
 		
 Condition ::= (Condition1) CondTerm:C1 {: RESULT=new Condition1(C1); RESULT.setLine(C1left); :}
 			|
-			(Condition2) Condition:C1 OR CondTerm:C2 {: RESULT=new Condition2(C1, C2); RESULT.setLine(C1left); :}
+			(Condition2) Condition:C1 OR OrBreak:O2 CondTerm:C3 {: RESULT=new Condition2(C1, O2, C3); RESULT.setLine(C1left); :}
 			;
 
 CondTerm ::= (CondTerm1) CondFact:C1 {: RESULT=new CondTerm1(C1); RESULT.setLine(C1left); :}
