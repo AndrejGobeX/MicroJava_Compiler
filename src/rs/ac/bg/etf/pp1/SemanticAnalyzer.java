@@ -398,6 +398,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	public void visit(SingleStatementPrint singleStatement){
+		if(singleStatement.getExpr().obj == null)
+			return;
 		if(singleStatement.getExpr().obj.getKind() != Obj.Var &&
 				singleStatement.getExpr().obj.getKind() != Obj.Con &&
 				singleStatement.getExpr().obj.getKind() != Obj.Elem &&
@@ -568,6 +570,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	public void visit(Designator designator){
+		if(currentDesignatorObj.size() == 0)
+			return;
 		designator.obj = currentDesignatorObj.peek();
 		currentDesignatorObj.pop();
 	}
@@ -622,6 +626,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	public void visit(Terms2 terms){
+		if(terms.getTerms().obj == null)
+			return;
 		if(terms.getTerms().obj.getType().getKind() != Struct.Int
 			|| terms.getTerm().obj.getType().getKind() != Struct.Int){
 			report_error("Nije moguce primeniti operator na objekat koji nije int", terms);

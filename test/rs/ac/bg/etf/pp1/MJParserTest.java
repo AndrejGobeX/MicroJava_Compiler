@@ -42,7 +42,12 @@ public class MJParserTest {
 
 			// ispis prepoznatih programskih konstrukcija
 			SemanticAnalyzer v = new SemanticAnalyzer();
-			prog.traverseBottomUp(v); 
+			try{
+				prog.traverseBottomUp(v);
+			}
+			catch (NullPointerException e){
+				log.info("Nije moguce nastaviti prevodjenje");
+			}
 			
 			log.info("===================================");
 			Tab.dump();
